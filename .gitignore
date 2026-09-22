@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# VS Code local settings
+.vscode/
+*.code-workspace
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Build/cache files
+dist/
+build/
+*.egg-info/
+
+# Local datasets and generated files
+dataset/processed/*
+dataset/sample/*
