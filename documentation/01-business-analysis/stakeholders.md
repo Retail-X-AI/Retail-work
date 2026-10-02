@@ -18,7 +18,7 @@ The stakeholder analysis identifies the people and groups who interact with the 
 
 **Responsibilities:**
 
-• Manage the shop's products and inventory.
+• Manage the products and inventory.
 
 • Monitor sales.
 
