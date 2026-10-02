@@ -84,7 +84,7 @@ The stakeholder analysis identifies the people and groups who interact with the 
 
 • Clear alerts.
 
-• Reliable system functionality.
+• Reliable and trusted system functionality.
 
 **Interest:** High
 
