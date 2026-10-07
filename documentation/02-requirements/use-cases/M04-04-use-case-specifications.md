@@ -4,13 +4,15 @@
 
 This document defines the main use cases for the Retail-X-AI system based on the approved functional requirements.
 
-Retail-X-AI is an AI-powered inventory demand forecasting and smart restocking system for local spaza shops. The use cases describe how the Shop Owner / Manager interacts with the system to capture retail data, obtain forecasts, receive restocking recommendations, identify products requiring attention, use the AI assistant, and view inventory information.
+Retail-X-AI is an AI-powered inventory demand forecasting and smart restocking system for local spaza shops. The use cases describe how the Shop Owner / Manager interacts with the system to capture retail data, obtain demand forecasts, receive restocking recommendations, identify products requiring attention, use the AI assistant, and view inventory information.
+
+The use cases provide a clear description of how users interact with Retail-X-AI and provide a basis for requirements traceability, system analysis, system design, and subsequent implementation.
 
 ## 2. Primary Actor
 
 **Shop Owner / Manager / User**
 
-The primary actor uses Retail-X-AI to manage and understand sales and inventory information and to support inventory decisions.
+The primary actor uses Retail-X-AI to manage and understand sales and inventory information and to support inventory, purchasing, and grocery-planning decisions.
 
 ## 3. Use Case Overview
 
@@ -20,7 +22,7 @@ The primary actor uses Retail-X-AI to manage and understand sales and inventory 
 | UC-02 | Generate Demand Forecast | FR-02 |
 | UC-03 | Calculate Recommended Reorder Quantities | FR-03 |
 | UC-04 | Identify Slow-Moving and Near-Expiry Products | FR-04 |
-| UC-05 | Interact with Natural-Language Chatbot | FR-05 |
+| UC-05 | Interact with Natural-Language AI Assistant | FR-05 |
 | UC-06 | View Interactive Dashboard | FR-06 |
 
 ---
@@ -76,7 +78,7 @@ The user needs to add or update retail sales and stock information.
 
 ## Goal
 
-Generate an estimate of future product demand using available historical sales data.
+Generate an estimate of future product demand using available historical sales data and relevant retail information.
 
 ## Primary Actor
 
@@ -95,11 +97,12 @@ The user requests a demand forecast or the system processes available data for f
 ## Main Flow
 
 1. The user selects a product, product category, or forecasting view.
-2. Retail-X-AI retrieves relevant historical sales data.
+2. Retail-X-AI retrieves relevant historical sales and inventory data.
 3. The system prepares the data for forecasting.
 4. The forecasting component analyses historical demand patterns.
 5. The system generates a demand forecast.
-6. The forecast is presented to the user.
+6. The forecast is stored or made available for inventory decision support.
+7. The forecast is presented to the user.
 
 ## Alternative / Exception Flows
 
@@ -110,7 +113,7 @@ The user requests a demand forecast or the system processes available data for f
 ## Postconditions
 
 - A demand forecast is generated when sufficient valid data is available.
-- Forecast information is available to support inventory decisions.
+- Forecast information is available to support inventory and purchasing decisions.
 
 ## Related Requirement
 
@@ -147,12 +150,14 @@ The user requests a restocking recommendation or the system identifies a need fo
 4. The system evaluates the available replenishment information.
 5. The system calculates a recommended reorder quantity.
 6. The recommendation is presented to the user.
+7. The user can use the recommendation to support a purchasing decision.
 
 ## Alternative / Exception Flows
 
 - If current stock information is unavailable, the system requests updated stock information.
 - If forecast information is unavailable, the system attempts to generate or retrieve the required forecast.
 - If required replenishment information is unavailable, the system identifies the missing information and avoids presenting an unsupported recommendation.
+- If supplier lead-time information is unavailable, the system must not assume a supplier lead time that has not been provided.
 
 ## Postconditions
 
@@ -177,7 +182,7 @@ Shop Owner / Manager / User
 
 ## Trigger
 
-The user requests product attention information or the system performs an analysis of products requiring attention.
+The user requests product-attention information or the system performs an analysis of products requiring attention.
 
 ## Preconditions
 
@@ -186,7 +191,7 @@ The user requests product attention information or the system performs an analys
 
 ## Main Flow
 
-1. The user opens the product attention or alerts function.
+1. The user opens the product-attention or alerts function.
 2. Retail-X-AI analyses available product sales and inventory information.
 3. The system identifies products with slow sales movement.
 4. Where expiry information is available, the system checks products approaching expiry.
@@ -198,6 +203,7 @@ The user requests product attention information or the system performs an analys
 - If insufficient sales information is available, slow-moving analysis may not be possible.
 - If expiry information is unavailable, expiry-based alerts cannot be generated.
 - The system clearly distinguishes unavailable expiry information from products that are confirmed to be near expiry.
+- The system must not identify a product as near expiry without valid expiry information.
 
 ## Postconditions
 
@@ -211,11 +217,11 @@ The user requests product attention information or the system performs an analys
 
 ---
 
-# UC-05 — Interact with Natural-Language Chatbot
+# UC-05 — Interact with Natural-Language AI Assistant
 
 ## Goal
 
-Allow the Shop Owner / Manager / User to ask questions about inventory and sales information using natural language.
+Allow the Shop Owner / Manager / User to interact with Retail-X-AI using natural language to obtain inventory information, sales insights, restocking guidance, product suggestions, grocery planning assistance, and purchasing decision support.
 
 ## Primary Actor
 
@@ -223,143 +229,44 @@ Shop Owner / Manager / User
 
 ## Trigger
 
-The user submits a question or request to the AI chatbot.
+The user submits a natural-language question, request, or planning task to the AI assistant.
 
 ## Preconditions
 
-- The chatbot is available.
-- Relevant retail information is available to the system.
+- The AI assistant is available.
+- Relevant product, sales, inventory, forecast, recommendation, or pricing information is available where required.
+- The user has access to the AI assistant.
 
 ## Main Flow
 
 1. The user opens the AI assistant.
-2. The user enters a natural-language question.
+2. The user enters a natural-language question or request.
 3. Retail-X-AI processes the user's request.
-4. The system identifies the relevant information or function.
-5. The system retrieves or calculates the required information.
-6. The chatbot provides a response in understandable language.
+4. The system identifies the relevant information, task, or decision-support requirement.
+5. The system retrieves available product, sales, inventory, forecast, recommendation, or pricing information where applicable.
+6. The system generates a response based on the available information.
+7. The AI assistant presents the response in understandable language.
+8. The user can ask a follow-up question or refine the request.
 
-## Example Queries
+## Supported Examples
+
+The user may ask questions such as:
 
 - "What is the current stock level?"
 - "Which products are likely to have high demand?"
 - "Which products should I reorder?"
 - "What are my slow-moving products?"
 - "Which products need attention?"
+- "Create a grocery list for my household."
+- "Help me plan my groceries for the week."
+- "Suggest healthy food options for my grocery list."
+- "I have R1,500. What groceries should I prioritise?"
+- "Which products should I buy first within my budget?"
+- "Compare these products and help me decide which one to purchase."
 
 ## Alternative / Exception Flows
 
-- If the chatbot cannot understand the request, it asks the user to rephrase the question.
-- If required data is unavailable, the chatbot explains that the information cannot currently be provided.
-- If a request is outside the supported system functions, the chatbot informs the user.
-
-## Postconditions
-
-- The user receives an understandable response where the required information is available.
-- The interaction may provide information needed for inventory decision-making.
-
-## Related Requirement
-
-**FR-05 — Provide a Natural-Language Chatbot**
-
----
-
-# UC-06 — View Interactive Dashboard
-
-## Goal
-
-Allow the Shop Owner / Manager / User to view important sales, inventory, forecasting, recommendation, and alert information in one interface.
-
-## Primary Actor
-
-Shop Owner / Manager / User
-
-## Trigger
-
-The user opens the Retail-X-AI dashboard.
-
-## Preconditions
-
-- The system is available.
-- Relevant sales, inventory, forecasting, or recommendation information is available.
-
-## Main Flow
-
-1. The user opens the dashboard.
-2. Retail-X-AI retrieves the available relevant information.
-3. The dashboard displays sales trends.
-4. The dashboard displays current stock levels.
-5. The dashboard displays demand predictions.
-6. The dashboard displays reorder recommendations.
-7. The dashboard displays relevant stock alerts.
-8. The user reviews the information to support inventory decisions.
-
-## Alternative / Exception Flows
-
-- If a data source is unavailable, the dashboard indicates that the affected information is unavailable.
-- If no forecast is available, the forecast section displays an appropriate unavailable state.
-- If no alerts are currently applicable, the dashboard indicates that there are no current alerts.
-
-## Postconditions
-
-- The user can view relevant retail information.
-- The displayed information supports inventory management and purchasing decisions.
-
-## Related Requirement
-
-**FR-06 — Display an Interactive Dashboard**
-
----
-
-# 4. Use Case Relationships
-
-The use cases support the Retail-X-AI workflow:
-
-**UC-01 Capture Sales and Stock Data**  
-→ provides data for  
-**UC-02 Generate Demand Forecast**  
-→ supports  
-**UC-03 Calculate Recommended Reorder Quantities**
-
-Sales and inventory analysis also supports:
-
-**UC-04 Identify Slow-Moving and Near-Expiry Products**
-
-The outputs from these functions can be presented through:
-
-**UC-06 View Interactive Dashboard**
-
-The user can also access relevant information through:
-
-**UC-05 Interact with Natural-Language Chatbot**
-
-## 5. Traceability Summary
-
-| Functional Requirement | Use Case |
-|---|---|
-| FR-01 | UC-01 |
-| FR-02 | UC-02 |
-| FR-03 | UC-03 |
-| FR-04 | UC-04 |
-| FR-05 | UC-05 |
-| FR-06 | UC-06 |
-
-## 6. Data Limitation Note
-
-The current Retail-X-AI team dataset contains sales, inventory, product, pricing, discount, weather, holiday/promotion, competitor pricing, and seasonality information.
-
-It does **not** directly contain supplier lead-time or product-expiry-date fields.
-
-Therefore:
-
-- FR-03 identifies supplier lead time as a business input that may require additional data or user input.
-- FR-04 identifies expiry monitoring as a system requirement, but expiry-based analysis requires expiry information that is not present in the current dataset.
-- The system must not represent unavailable expiry or supplier information as if it were present in the current dataset.
-
-This distinction will be considered during subsequent system design, database design, and implementation.
-
-## 7. Verification
-
-The six use cases were derived from the six functional requirements documented in the Retail-X-AI requirements specification.
-
-Each functional requirement has a corresponding use case, providing a direct basis for requirements traceability in M04-05.
+- If the assistant cannot understand the request, it asks the user to rephrase or clarify the question.
+- If required retail data is unavailable, the assistant explains that the requested information cannot currently be confirmed.
+- If pricing or product information is unavailable, the assistant must not invent prices or product details.
+- If the requested information is outside
