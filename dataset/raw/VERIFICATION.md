@@ -27,7 +27,6 @@
 | Duplicate rows | Not checked |
 | Negative inventory values | None detected |
 
-*(If any of the above is different from what you see in the file, tell me and I'll help you correct it.)*
 
 ---
 
@@ -54,7 +53,7 @@ The dataset is suitable for:
 - Demand forecasting (has Date + Units Sold + Demand Forecast)
 - Stockout detection (has Inventory Level + Units Sold)
 - Slow-moving analysis (has Product ID + Units Sold over time)
-- Expiry analysis — ⚠️ not supported (no expiry column)
+- Expiry analysis —  not supported (no expiry column)
 - AI chatbot queries (rich enough for common questions)
 
 **Limitations:**
