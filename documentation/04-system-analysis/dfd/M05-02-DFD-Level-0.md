@@ -154,6 +154,8 @@ flowchart LR
     D4 -->|"Alerts and recommendations"| P7
     P7 -->|"Dashboard information, forecasts, alerts and recommendations"| E1
 
+```
+
 ## 7. Scope and Data Limitations
 
 The DFD represents the logical information flows required by the system requirements.
