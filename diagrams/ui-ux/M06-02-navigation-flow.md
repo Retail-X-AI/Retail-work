@@ -1,72 +1,43 @@
-# M06-02 — Retail-X-AI Navigation Flow
+# M06-02 — Navigation Flow
 
-## Purpose
-Show how the Shop Owner / Manager navigates between the main Retail-X-AI functions.
+## Shared navigation
+
+Every screen uses the same left-hand navigation in this order: **Dashboard → Inventory → Forecasting → Restocking → Alerts → AI Chatbot**. The active destination is highlighted, and the chatbot remains directly accessible from every screen.
 
 ```mermaid
 flowchart TD
-    START([Open Retail-X-AI]) --> DASH[Dashboard]
-
-    DASH --> DATA[Capture Sales and Stock]
-    DASH --> FORECAST[Demand Forecasts]
-    DASH --> RESTOCK[Restocking Recommendations]
-    DASH --> ALERTS[Product Alerts]
-    DASH --> ASSIST[AI Assistant]
-
-    DATA --> METHOD{Choose input method}
-    METHOD --> CSV[Upload CSV / POS Export]
-    METHOD --> MANUAL[Manual Data Entry]
-    CSV --> VALIDATE{Data valid?}
-    MANUAL --> VALIDATE
-    VALIDATE -->|Yes| SAVED[Confirmation and Saved Data]
-    VALIDATE -->|No| ERR[Show errors and request correction]
-    ERR --> METHOD
-    SAVED --> DASH
-
-    FORECAST --> SELECT[Select product or category]
-    SELECT --> CHECK{Sufficient valid history?}
-    CHECK -->|Yes| RESULT[View Forecast]
-    CHECK -->|No| INSUFF[Explain insufficient data]
-    RESULT --> RESTOCK
-    INSUFF --> DATA
-
-    RESTOCK --> STOCK{Stock and demand data available?}
-    STOCK -->|Yes| RECOMMEND[View suggested reorder quantity]
-    STOCK -->|No| MISSING[Explain missing information]
-    RECOMMEND --> DASH
-    MISSING --> DATA
-
-    ALERTS --> REVIEW[Review slow-moving products]
-    REVIEW --> EXPIRY{Valid expiry data available?}
-    EXPIRY -->|Yes| EXP[Show verified expiry alerts where applicable]
-    EXPIRY -->|No| NOEXP[State expiry status cannot be confirmed]
-    EXP --> DASH
-    NOEXP --> DASH
-
-    ASSIST --> QUESTION[Enter a natural-language request]
-    QUESTION --> RESPONSE[View answer based on available information]
-    RESPONSE --> FOLLOW{Ask follow-up?}
-    FOLLOW -->|Yes| QUESTION
-    FOLLOW -->|No| DASH
-
-    classDef main fill:#e8f0fe,stroke:#356ac3,color:#172b4d
-    classDef caution fill:#fff4d6,stroke:#b78103,color:#493600
-    class DASH,DATA,FORECAST,RESTOCK,ALERTS,ASSIST main
-    class ERR,INSUFF,MISSING,NOEXP caution
+    D[Dashboard] --> I[Inventory]
+    D --> F[Forecasting]
+    D --> R[Restocking]
+    D --> A[Product Alerts]
+    D --> C[AI Chatbot]
+    I <--> F
+    I <--> R
+    I --> A
+    F --> R
+    F --> C
+    R --> C
+    A --> C
+    I --> V{Inventory data available?}
+    V -- Yes --> I1[Show source-backed stock values]
+    V -- No --> I2[Show missing-data state; no invented values]
+    F --> H{Enough demand history?}
+    H -- Yes --> F1[Show observed demand and forecast separately]
+    H -- No --> F2[Explain forecast is unavailable or limited]
+    R --> Q[Review recommendation]
+    Q --> P[Human checks before purchase action]
+    C --> G[Answer from connected Retail-X sources]
+    G --> M{Required evidence available?}
+    M -- Yes --> E[Explain answer and source context]
+    M -- No --> N[State what is missing; do not guess]
+    A --> X[Verify alert type, timestamp and source]
 ```
 
-## Primary navigation
-- Dashboard
-- Capture Sales and Stock
-- Demand Forecasts
-- Restocking Recommendations
-- Product Alerts
-- AI Assistant
+## Main interaction rules
 
-## Navigation rules
-- Keep the primary navigation available from every main screen.
-- Provide a clear return to the Dashboard.
-- Show validation errors beside the relevant data input.
-- Never show a forecast or reorder quantity as confirmed when required data is missing.
-- Never label a product as near expiry unless valid expiry data supports that status.
-- The AI Assistant must explain when requested information is unavailable rather than inventing figures.
+- Dashboard provides a high-level entry point to all six areas.
+- Inventory is the source for current stock and configured reorder thresholds. Unknown values remain visibly unknown.
+- Forecasting separates historical observations from projected demand and communicates limited or missing history.
+- Restocking recommendations are advisory and require human review before any order is placed.
+- Alerts show the type, severity, source and timestamp when available. Expiry-related information must be verified against its source.
+- The AI Chatbot can be opened from any screen. It should answer using connected Retail-X data, state relevant limitations, and never fabricate quantities, forecasts or events.

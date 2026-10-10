@@ -1,27 +1,37 @@
-# M06-02 — Wireframe Coverage Notes
+# M06-02 Wireframe Notes
 
-## Visual wireframe inventory
+## What these artefacts represent
 
-The two SVG files together provide low-fidelity desktop layouts for all six screens:
+The SVGs are static, editable vector wireframes showing the proposed Retail-X desktop interface in dark mode. They are intended to communicate structure, screen hierarchy, navigation and key user interactions to the person implementing the UI. They are **not screenshots of a running application**.
 
-- UI-01 — Dashboard
-- UI-02 — Data Capture
-- UI-03 — Demand Forecasts
-- UI-04 — Restocking Recommendations
-- UI-05 — Product Alerts
-- UI-06 — AI Assistant
+## Files
 
-### Wireframe files
+- `M06-02-wireframes.svg`: four screens — Dashboard, Inventory, Forecasting and Restocking.
+- `M06-02-wireframes-alerts-assistant.svg`: two screens — Product Alerts and AI Chatbot.
+- `M06-02-navigation-flow.md`: navigation paths and data-aware behaviour.
 
-- `M06-02-wireframes.svg` — Dashboard, Data Capture, Demand Forecasts, and Restocking.
-- `M06-02-wireframes-alerts-assistant.svg` — Product Alerts and AI Assistant.
+## Dark-mode style
 
-The screen descriptions, requirements, and use-case mappings are documented in `documentation/05-system-design/ui-ux/M06-02-navigation-and-wireframes.md`.
+Near-black canvas, charcoal panels, white primary text, muted secondary text and restrained teal / blue / amber / red accents. Keep the left navigation consistent on every screen and clearly highlight the active destination.
 
-These are conceptual, low-fidelity design artefacts. They establish content hierarchy and navigation, not final branding, production styling, or implemented behaviour. Example products and conversation content are placeholders, not actual Retail-X data.
+## Screen-to-use-case mapping
 
-## Design safeguards
+| Screen | Main purpose | Use-case alignment |
+| --- | --- | --- |
+| UI-01 Dashboard | Overview and shortcuts | UC-01 overview / entry point |
+| UI-02 Inventory | Product and stock review | UC-02 inventory / data review |
+| UI-03 Forecasting | Demand history and projections | UC-03 demand forecasting |
+| UI-04 Restocking | Review suggested replenishment | UC-04 restocking decision support |
+| UI-05 Product Alerts | Review exceptions and warnings | UC-05 alerts |
+| UI-06 AI Chatbot | Ask questions using available data | UC-06 AI assistant |
 
-- Do not present forecasts or reorder quantities as confirmed when required data is missing.
-- Do not label a product as expired or near expiry without verified expiry data.
-- The AI Assistant should identify unavailable information rather than inventing figures.
+Confirm the UC numbering and wording against the approved use-case catalogue before implementation if that catalogue has changed.
+
+## Important constraints
+
+- Every displayed value and plotted trend is illustrative, not production data.
+- Leave unknown quantities, confidence and status values blank or explicitly unavailable. Do not invent inventory counts, demand predictions, alert events or expiry dates.
+- Clearly distinguish observed data from predicted demand. Indicate when forecasting is unavailable or limited by missing history.
+- Restocking is a human-reviewed recommendation; these designs do not specify automatic purchasing.
+- AI responses must be grounded in connected Retail-X sources and state when required information is missing.
+- Preserve readable contrast and the same menu order across the screen family: Dashboard, Inventory, Forecasting, Restocking, Alerts, AI Chatbot.
