@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1240" viewBox="0 0 1600 1240" role="img" aria-labelledby="title desc">
   <title id="title">Retail-X-AI low-fidelity desktop wireframes</title>
-  <desc id="desc">Six editable low-fidelity screen layouts: Dashboard, Data Capture, Demand Forecasts, Restocking, Product Alerts, and AI Assistant.</desc>
+  <desc id="desc">Four low-fidelity screen layouts: Dashboard, Data Capture, Demand Forecasts, and Restocking.</desc>
   <defs>
     <style>
       .bg{fill:#f4f6f8}.panel{fill:#fff;stroke:#aab4c0;stroke-width:2}.top{fill:#183153}.side{fill:#edf1f5}.accent{fill:#dceafe;stroke:#5485c8;stroke-width:1.5}.warn{fill:#fff2cf;stroke:#bd8b22;stroke-width:1.5}.line{stroke:#b7c0ca;stroke-width:2;fill:none}.ink{fill:#243447;font-family:Arial,sans-serif}.muted{fill:#657487;font-family:Arial,sans-serif}.white{fill:#fff;font-family:Arial,sans-serif}.h1{font-size:28px;font-weight:bold}.h2{font-size:19px;font-weight:bold}.txt{font-size:15px}.small{font-size:12px}.nav{font-size:13px}.card{fill:#fff;stroke:#c6ced7;stroke-width:1.5}.btn{fill:#244f82}.btntext{fill:#fff;font-family:Arial,sans-serif;font-size:13px;font-weight:bold}.active{fill:#dceafe}.field{fill:#fff;stroke:#aab4c0;stroke-width:1.5}.dash{stroke-dasharray:5 5}

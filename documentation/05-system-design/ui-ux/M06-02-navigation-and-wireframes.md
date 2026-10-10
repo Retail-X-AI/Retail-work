@@ -68,7 +68,8 @@ Provide a conversation history area, a text input, and a send action. Suggested 
 
 ## 8. Artefacts
 - Navigation flow: `diagrams/ui-ux/M06-02-navigation-flow.md`
-- Visual wireframes: `diagrams/ui-ux/M06-02-wireframes.svg`
+- Visual wireframes (UI-01 to UI-04): `diagrams/ui-ux/M06-02-wireframes.svg`
+- Visual wireframes (UI-05 and UI-06): `diagrams/ui-ux/M06-02-wireframes-alerts-assistant.svg`
 - This specification: `documentation/05-system-design/ui-ux/M06-02-navigation-and-wireframes.md`
 
 ## 9. Verification checklist
