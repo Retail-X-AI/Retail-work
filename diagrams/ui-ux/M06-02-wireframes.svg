@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1240" viewBox="0 0 1600 1240" role="img" aria-labelledby="title desc">
+  <title id="title">Retail-X-AI low-fidelity desktop wireframes</title>
+  <desc id="desc">Six editable low-fidelity screen layouts: Dashboard, Data Capture, Demand Forecasts, Restocking, Product Alerts, and AI Assistant.</desc>
+  <defs>
+    <style>
+      .bg{fill:#f4f6f8}.panel{fill:#fff;stroke:#aab4c0;stroke-width:2}.top{fill:#183153}.side{fill:#edf1f5}.accent{fill:#dceafe;stroke:#5485c8;stroke-width:1.5}.warn{fill:#fff2cf;stroke:#bd8b22;stroke-width:1.5}.line{stroke:#b7c0ca;stroke-width:2;fill:none}.ink{fill:#243447;font-family:Arial,sans-serif}.muted{fill:#657487;font-family:Arial,sans-serif}.white{fill:#fff;font-family:Arial,sans-serif}.h1{font-size:28px;font-weight:bold}.h2{font-size:19px;font-weight:bold}.txt{font-size:15px}.small{font-size:12px}.nav{font-size:13px}.card{fill:#fff;stroke:#c6ced7;stroke-width:1.5}.btn{fill:#244f82}.btntext{fill:#fff;font-family:Arial,sans-serif;font-size:13px;font-weight:bold}.active{fill:#dceafe}.field{fill:#fff;stroke:#aab4c0;stroke-width:1.5}.dash{stroke-dasharray:5 5}
+    </style>
+    <g id="shell">
+      <rect class="panel" width="740" height="520" rx="12"/>
+      <path class="top" d="M12 0 H728 Q740 0 740 12 V48 H0 V12 Q0 0 12 0Z"/>
+      <text class="white" x="18" y="30" font-size="18" font-weight="bold">Retail-X-AI</text>
+      <text class="white" x="720" y="29" font-size="12" text-anchor="end">Shop Owner / Manager</text>
+      <rect class="side" x="0" y="48" width="158" height="472"/>
+      <path class="line" d="M158 48 V520"/>
+      <text class="muted small" x="16" y="76">MAIN MENU</text>
+      <text class="ink nav" x="18" y="105">Dashboard</text>
+      <text class="ink nav" x="18" y="137">Capture Data</text>
+      <text class="ink nav" x="18" y="169">Forecasts</text>
+      <text class="ink nav" x="18" y="201">Restocking</text>
+      <text class="ink nav" x="18" y="233">Product Alerts</text>
+      <text class="ink nav" x="18" y="265">AI Assistant</text>
+    </g>
+    <g id="empty">
+      <rect class="warn" width="100" height="28" rx="5"/>
+      <text class="ink small" x="50" y="18" text-anchor="middle">No data yet</text>
+    </g>
+  </defs>
+  <rect class="bg" width="1600" height="1240"/>
+  <text class="ink" x="40" y="42" font-size="30" font-weight="bold">Retail-X-AI | M06-02 Wireframes</text>
+  <text class="muted" x="40" y="70" font-size="16">Low-fidelity desktop layouts • proposed design • no real inventory figures shown</text>
+
+  <!-- UI-01 Dashboard -->
+  <g transform="translate(40 100)">
+    <use href="#shell"/>
+    <rect class="active" x="8" y="84" width="142" height="29" rx="4"/>
+    <text class="ink h2" x="180" y="82">Dashboard</text>
+    <text class="muted small" x="180" y="103">Your inventory overview</text>
+    <rect class="card" x="180" y="120" width="165" height="82" rx="6"/>
+    <text class="muted small" x="194" y="143">Products tracked</text>
+    <text class="ink h2" x="194" y="168">—</text><text class="muted small" x="194" y="188">No data available yet</text>
+    <rect class="card" x="358" y="120" width="165" height="82" rx="6"/>
+    <text class="muted small" x="372" y="143">Forecast status</text><text class="ink h2" x="372" y="168">—</text><text class="muted small" x="372" y="188">Not calculated</text>
+    <rect class="card" x="536" y="120" width="184" height="82" rx="6"/>
+    <text class="muted small" x="550" y="143">Items needing attention</text><text class="ink h2" x="550" y="168">—</text><text class="muted small" x="550" y="188">No alerts loaded</text>
+    <rect class="card" x="180" y="218" width="330" height="132" rx="6"/>
+    <text class="ink h2" x="196" y="245">Demand overview</text>
+    <path class="line dash" d="M198 316 H490 M198 287 H490 M198 258 H490"/>
+    <text class="muted small" x="196" y="338">A chart appears when valid data exists.</text>
+    <rect class="card" x="523" y="218" width="197" height="132" rx="6"/>
+    <text class="ink h2" x="539" y="245">Quick actions</text>
+    <rect class="btn" x="539" y="260" width="165" height="26" rx="4"/><text class="btntext" x="621" y="277" text-anchor="middle">Capture data</text>
+    <rect class="btn" x="539" y="293" width="165" height="26" rx="4"/><text class="btntext" x="621" y="310" text-anchor="middle">View forecasts</text>
+    <rect class="btn" x="539" y="326" width="165" height="18" rx="4"/><text class="white" x="621" y="339" font-size="11" text-anchor="middle">Ask AI Assistant</text>
+    <rect class="card" x="180" y="366" width="540" height="126" rx="6"/>
+    <text class="ink h2" x="196" y="393">Recent alerts and recommendations</text>
+    <text class="muted txt" x="196" y="422">No items to display until data is available.</text>
+    <text class="muted small" x="196" y="451">Open Product Alerts or Restocking for details.</text>
+    <text class="muted small" x="180" y="510">UI-01</text>
+  </g>
+
+  <!-- UI-02 Data Capture -->
+  <g transform="translate(820 100)">
+    <use href="#shell"/>
+    <rect class="active" x="8" y="116" width="142" height="29" rx="4"/>
+    <text class="ink h2" x="180" y="82">Capture sales and stock</text>
+    <text class="muted small" x="180" y="103">Choose how to provide retail data</text>
+    <rect class="card" x="180" y="120" width="250" height="120" rx="6"/>
+    <text class="ink h2" x="196" y="148">Import a file</text>
+    <text class="muted txt" x="196" y="172">CSV or supported POS export</text>
+    <rect class="field" x="196" y="186" width="218" height="34" rx="4"/>
+    <text class="muted small" x="207" y="207">Choose file…</text>
+    <rect class="card" x="442" y="120" width="278" height="120" rx="6"/>
+    <text class="ink h2" x="458" y="148">Manual entry</text>
+    <text class="muted txt" x="458" y="172">Enter product and stock details</text>
+    <rect class="btn" x="458" y="188" width="145" height="32" rx="4"/><text class="btntext" x="530" y="208" text-anchor="middle">Add a record</text>
+    <text class="ink h2" x="180" y="275">Data preview / entry form</text>
+    <rect class="field" x="180" y="290" width="170" height="38" rx="4"/><text class="muted small" x="191" y="313">Product name *</text>
+    <rect class="field" x="360" y="290" width="110" height="38" rx="4"/><text class="muted small" x="371" y="313">Quantity *</text>
+    <rect class="field" x="480" y="290" width="110" height="38" rx="4"/><text class="muted small" x="491" y="313">Sales *</text>
+    <rect class="field" x="600" y="290" width="120" height="38" rx="4"/><text class="muted small" x="611" y="313">Expiry (if known)</text>
+    <rect class="line" x="180" y="342" width="540" height="1"/>
+    <rect class="warn" x="180" y="362" width="540" height="55" rx="5"/>
+    <text class="ink txt" x="196" y="384">Validation messages appear here.</text>
+    <text class="muted small" x="196" y="403">Incomplete or invalid records are not marked as saved.</text>
+    <rect class="btn" x="180" y="435" width="160" height="34" rx="4"/><text class="btntext" x="260" y="456" text-anchor="middle">Validate and save</text>
+    <text class="muted small" x="355" y="456">Show confirmation after a successful save.</text>
+    <text class="muted small" x="180" y="510">UI-02</text>
+  </g>
+
+  <!-- UI-03 Forecasts -->
+  <g transform="translate(40 660)">
+    <use href="#shell"/>
+    <rect class="active" x="8" y="148" width="142" height="29" rx="4"/>
+    <text class="ink h2" x="180" y="82">Demand forecasts</text>
+    <text class="muted small" x="180" y="103">Explore demand by product or category</text>
+    <text class="ink txt" x="180" y="139">Product / category</text>
+    <rect class="field" x="180" y="150" width="250" height="38" rx="4"/><text class="muted txt" x="194" y="174">Select product or category…</text>
+    <text class="ink txt" x="448" y="139">Forecast period</text>
+    <rect class="field" x="448" y="150" width="155" height="38" rx="4"/><text class="muted txt" x="462" y="174">Choose period…</text>
+    <rect class="btn" x="616" y="150" width="104" height="38" rx="4"/><text class="btntext" x="668" y="173" text-anchor="middle">Generate</text>
+    <rect class="card" x="180" y="207" width="540" height="150" rx="6"/>
+    <text class="ink h2" x="198" y="234">Forecast chart</text>
+    <path class="line dash" d="M200 324 H700 M200 295 H700 M200 266 H700"/>
+    <text class="muted small" x="198" y="345">Chart and units appear only when a forecast is available.</text>
+    <rect class="warn" x="180" y="375" width="540" height="73" rx="6"/>
+    <text class="ink h2" x="198" y="401">Data availability</text>
+    <text class="ink txt" x="198" y="423">If history is insufficient, explain why a reliable forecast cannot be generated.</text>
+    <text class="muted small" x="180" y="510">UI-03</text>
+  </g>
+
+  <!-- UI-04 Restocking -->
+  <g transform="translate(820 660)">
+    <use href="#shell"/>
+    <rect class="active" x="8" y="180" width="142" height="29" rx="4"/>
+    <text class="ink h2" x="180" y="82">Restocking recommendations</text>
+    <text class="muted small" x="180" y="103">Review suggested quantities and their basis</text>
+    <rect class="field" x="180" y="122" width="220" height="36" rx="4"/><text class="muted txt" x="194" y="145">Search product…</text>
+    <rect class="field" x="410" y="122" width="160" height="36" rx="4"/><text class="muted txt" x="424" y="145">Filter status…</text>
+    <rect class="btn" x="582" y="122" width="138" height="36" rx="4"/><text class="btntext" x="651" y="145" text-anchor="middle">Refresh results</text>
+    <rect class="card" x="180" y="174" width="540" height="190" rx="6"/>
+    <rect class="side" x="180" y="174" width="540" height="36" rx="6"/>
+    <text class="ink small" x="194" y="196" font-weight="bold">Product</text><text class="ink small" x="330" y="196" font-weight="bold">Current stock</text><text class="ink small" x="442" y="196" font-weight="bold">Demand basis</text><text class="ink small" x="585" y="196" font-weight="bold">Suggested qty.</text>
+    <path class="line" d="M180 250 H720 M180 291 H720 M180 332 H720"/>
+    <text class="muted txt" x="194" y="235">—</text><text class="muted txt" x="330" y="235">—</text><text class="muted txt" x="442" y="235">—</text><text class="muted small" x="585" y="235">Unavailable</text>
+    <text class="muted txt" x="194" y="276">—</text><text class="muted txt" x="330" y="276">—</text><text class="muted txt" x="442" y="276">—</text><text class="muted small" x="585" y="276">Unavailable</text>
+    <text class="muted txt" x="194" y="317">—</text><text class="muted txt" x="330" y="317">—</text><text class="muted txt" x="442" y="317">—</text><text class="muted small" x="585" y="317">Unavailable</text>
+    <rect class="warn" x="180" y="383" width="540" height="70" rx="6"/>
+    <text class="ink h2" x="196" y="409">Recommendation status</text>
+    <text class="ink txt" x="196" y="431">Missing stock, demand, or replenishment details must be identified.</text>
+    <text class="muted small" x="180" y="510">UI-04</text>
+  </g>
+
+  <!-- screen labels -->
+  <rect x="40" y="1197" width="1520" height="1" fill="#c6ced7"/>
+  <text class="muted" x="40" y="1220" font-size="13">Wireframes are illustrative layout specifications. Product data, prices, forecast values, and alert counts are intentionally not fabricated.</text>
+</svg>

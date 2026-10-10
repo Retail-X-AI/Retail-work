@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="720" viewBox="0 0 1600 720" role="img" aria-labelledby="title desc">
+  <title id="title">M06-02 Product Alerts and AI Assistant Wireframes</title>
+  <desc id="desc">Two desktop interface wireframes for the Retail-X inventory application.</desc>
+  <defs>
+    <style>
+      .bg{fill:#f4f6f8}.panel{fill:#fff;stroke:#cbd5e1;stroke-width:2}
+      .nav{fill:#172b4d}.navtext{fill:#fff;font:16px Arial}
+      .heading{fill:#172b4d;font:bold 25px Arial}
+      .subheading{fill:#172b4d;font:bold 17px Arial}
+      .text{fill:#334155;font:14px Arial}.small{fill:#64748b;font:12px Arial}
+      .field{fill:#fff;stroke:#cbd5e1;stroke-width:1.5}
+      .card{fill:#f8fafc;stroke:#dbe2ea;stroke-width:1.5}
+      .warning{fill:#fff7ed;stroke:#fdba74;stroke-width:1.5}
+      .button{fill:#1d4ed8}.buttontext{fill:#fff;font:bold 13px Arial}
+      .line{stroke:#e2e8f0;stroke-width:1.5}
+    </style>
+  </defs>
+  <rect class="bg" width="1600" height="720"/>
+  <text x="40" y="38" class="heading">Retail-X AI — Additional Screen Wireframes</text>
+  <text x="40" y="62" class="small">M06-02 · Conceptual desktop layouts · Validate with stakeholders before implementation</text>
+
+  <!-- UI-05 Product Alerts -->
+  <rect x="35" y="85" width="750" height="590" rx="12" class="panel"/>
+  <rect x="35" y="85" width="750" height="52" rx="12" class="nav"/>
+  <text x="55" y="117" class="navtext" font-weight="bold">Retail-X AI</text>
+  <text x="215" y="117" class="navtext">Dashboard</text>
+  <text x="330" y="117" class="navtext">Inventory</text>
+  <text x="445" y="117" class="navtext">Forecasts</text>
+  <text x="570" y="117" class="navtext">Alerts</text>
+  <text x="55" y="174" class="heading">Product Alerts</text>
+  <text x="55" y="198" class="small">Review slow-moving items and expiry alerts supported by available data.</text>
+  <rect x="55" y="218" width="215" height="62" rx="7" class="card"/>
+  <text x="70" y="241" class="small">Slow-moving items</text>
+  <text x="70" y="263" class="subheading">Review list</text>
+  <rect x="285" y="218" width="215" height="62" rx="7" class="card"/>
+  <text x="300" y="241" class="small">Expiry alerts</text>
+  <text x="300" y="263" class="subheading">Verified records</text>
+  <rect x="515" y="218" width="245" height="62" rx="7" class="card"/>
+  <text x="530" y="241" class="small">Data status</text>
+  <text x="530" y="263" class="subheading">Check completeness</text>
+  <text x="55" y="313" class="subheading">Filter alerts</text>
+  <rect x="55" y="326" width="205" height="38" rx="5" class="field"/>
+  <text x="68" y="350" class="text">Alert type ▾</text>
+  <rect x="272" y="326" width="205" height="38" rx="5" class="field"/>
+  <text x="285" y="350" class="text">Product / SKU</text>
+  <rect x="490" y="326" width="120" height="38" rx="5" class="button"/>
+  <text x="518" y="350" class="buttontext">Apply</text>
+  <rect x="55" y="382" width="705" height="35" fill="#eaf0f8"/>
+  <text x="67" y="404" class="small">PRODUCT</text>
+  <text x="250" y="404" class="small">ALERT</text>
+  <text x="410" y="404" class="small">EVIDENCE</text>
+  <text x="615" y="404" class="small">ACTION</text>
+  <line x1="55" y1="417" x2="760" y2="417" class="line"/>
+  <text x="67" y="443" class="text">Example product</text>
+  <text x="250" y="443" class="text">Slow-moving</text>
+  <text x="410" y="443" class="text">Sales history</text>
+  <text x="615" y="443" class="text">View details</text>
+  <line x1="55" y1="458" x2="760" y2="458" class="line"/>
+  <text x="67" y="484" class="text">Example product</text>
+  <text x="250" y="484" class="text">Expiry review</text>
+  <text x="410" y="484" class="text">Expiry date needed</text>
+  <text x="615" y="484" class="text">Verify data</text>
+  <rect x="55" y="514" width="705" height="94" rx="7" class="warning"/>
+  <text x="72" y="540" class="subheading">Data integrity notice</text>
+  <text x="72" y="563" class="text">Do not label a product as expired without a verified expiry date.</text>
+  <text x="72" y="585" class="text">When evidence is missing, show the missing information clearly.</text>
+  <text x="55" y="642" class="small">UI-05 · Use case UC-04 · Example rows are placeholders, not real inventory data.</text>
+
+  <!-- UI-06 AI Assistant -->
+  <rect x="815" y="85" width="750" height="590" rx="12" class="panel"/>
+  <rect x="815" y="85" width="750" height="52" rx="12" class="nav"/>
+  <text x="835" y="117" class="navtext" font-weight="bold">Retail-X AI</text>
+  <text x="995" y="117" class="navtext">Dashboard</text>
+  <text x="1110" y="117" class="navtext">Inventory</text>
+  <text x="1225" y="117" class="navtext">Forecasts</text>
+  <text x="1350" y="117" class="navtext">AI Assistant</text>
+  <text x="835" y="174" class="heading">AI Inventory Assistant</text>
+  <text x="835" y="198" class="small">Ask questions about inventory, forecasts, restocking, and grocery planning.</text>
+  <rect x="835" y="218" width="710" height="330" rx="8" class="card"/>
+  <text x="855" y="246" class="subheading">Conversation</text>
+  <rect x="855" y="262" width="490" height="56" rx="8" fill="#dbeafe"/>
+  <text x="870" y="284" class="text">Which products may need restocking</text>
+  <text x="870" y="303" class="text">soon?</text>
+  <rect x="895" y="332" width="625" height="102" rx="8" class="panel"/>
+  <text x="912" y="356" class="text">I can help assess restocking needs using available</text>
+  <text x="912" y="377" class="text">stock, sales, forecast, and supplier lead-time data.</text>
+  <text x="912" y="398" class="text">Some required data may be unavailable; I will identify</text>
+  <text x="912" y="419" class="text">what is missing rather than invent a recommendation.</text>
+  <text x="855" y="470" class="small">Suggested questions</text>
+  <rect x="855" y="481" width="195" height="40" rx="6" class="field"/>
+  <text x="866" y="505" class="small">Explain a forecast</text>
+  <rect x="1060" y="481" width="210" height="40" rx="6" class="field"/>
+  <text x="1071" y="505" class="small">Review stock levels</text>
+  <rect x="1280" y="481" width="240" height="40" rx="6" class="field"/>
+  <text x="1291" y="505" class="small">Help plan a grocery list</text>
+  <rect x="835" y="565" width="580" height="45" rx="6" class="field"/>
+  <text x="852" y="593" class="small">Type your question…</text>
+  <rect x="1425" y="565" width="120" height="45" rx="6" class="button"/>
+  <text x="1461" y="593" class="buttontext">Send</text>
+  <text x="835" y="642" class="small">UI-06 · Use case UC-05 · Responses must distinguish verified data from unavailable data.</text>
+</svg>
