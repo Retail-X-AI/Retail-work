@@ -68,11 +68,8 @@ CREATE TABLE INVENTORY_RECORD (
 -- ==========================================
 -- M07-05 REQUIREMENT: INDEXES
 -- ==========================================
--- Indexes to optimize reporting queries (e.g., lookups by date, store, product)
 CREATE INDEX idx_inventory_date ON INVENTORY_RECORD(Date_ID);
 CREATE INDEX idx_inventory_store ON INVENTORY_RECORD(Store_ID);
 CREATE INDEX idx_inventory_product ON INVENTORY_RECORD(Product_ID);
 CREATE INDEX idx_inventory_store_product ON INVENTORY_RECORD(Store_ID, Product_ID);
-
--- Index for category lookups
 CREATE INDEX idx_product_category ON PRODUCT(Category_ID);
