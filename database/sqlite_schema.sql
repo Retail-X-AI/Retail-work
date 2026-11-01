@@ -1,4 +1,5 @@
-﻿PRAGMA foreign_keys = ON;
+PRAGMA foreign_keys = ON;
+
 
 CREATE TABLE IF NOT EXISTS inventory_records (
     record_id INTEGER PRIMARY KEY,
@@ -32,4 +33,5 @@ CREATE INDEX IF NOT EXISTS idx_inventory_store_product
     ON inventory_records(store_id, product_id);
 
 CREATE INDEX IF NOT EXISTS idx_inventory_category
+    ON inventory_records(category);
     ON inventory_records(category);
