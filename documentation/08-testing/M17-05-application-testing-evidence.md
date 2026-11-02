@@ -118,11 +118,18 @@ These recommendations must not be interpreted as live purchasing instructions.
 
 ### Model Performance
 
-The overall page displayed:
-- Random Forest MAE: 87.18
-- Random Forest RMSE: 106.06
+The dashboard displayed the following overall metrics, sourced from the root-level `retailai_model_evaluation.csv` file:
+
+- Dashboard-labelled Random Forest MAE: 87.18
+- Dashboard-labelled Random Forest RMSE: 106.06
 - Dataset Forecast MAE: 8.26
 - Dataset Forecast RMSE: 9.96
+
+The dashboard displays the `Our_Model_MAE` and `Our_Model_RMSE` columns under the labels Random Forest MAE and Random Forest RMSE, respectively.
+
+**Important distinction from the canonical model evaluation:** The M17-04 AI evidence documents the Ridge Regression temporal holdout evaluation with MAE 88.453325 and RMSE 107.996727 across 11,000 test records. These are separate evaluation outputs. The provenance and calculation differences between the dashboard CSV metrics and the canonical Ridge holdout metrics have not yet been reconciled. They must not be treated as interchangeable or combined.
+
+For the canonical model evaluation, refer to `documentation/07-ai/M17-04-ai-model-evidence.md`. The figures above are recorded only as the metrics displayed by the application during manual testing.
 
 The store-filter limitation is recorded in Section 4.
 

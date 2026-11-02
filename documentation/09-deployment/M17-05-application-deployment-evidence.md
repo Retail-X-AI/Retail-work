@@ -72,6 +72,11 @@ The chatbot returned historical advisory recommendations dated 1 January 2024. T
 
 The AI output audit reported that all historical reorder records were classified as `REORDER_NOW` and all stockout records as `STOCKOUT_RISK`. These distributions require review before operational use.
 
+The Model Performance dashboard displayed MAE 87.18 and RMSE 106.06 for its dashboard-labelled Random Forest metrics, and MAE 8.26 and RMSE 9.96 for Dataset Forecast. These values come from `retailai_model_evaluation.csv`.
+
+They are separate from the canonical Ridge Regression temporal holdout results documented in `documentation/07-ai/M17-04-ai-model-evidence.md` (MAE 88.453325 and RMSE 107.996727 across 11,000 test records). The provenance and calculation differences have not been reconciled. The figures must not be treated as interchangeable or combined. The dashboard values are recorded here only as observed application output.
+
+
 ## 7. Supporting Test Evidence
 
 Refer to:
