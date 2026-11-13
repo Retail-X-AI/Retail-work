@@ -16,7 +16,7 @@ from reorder import (
 
 RESTOCKING_DIR = Path(__file__).resolve().parent
 REPO_ROOT = RESTOCKING_DIR.parents[1]
-DATA_FILE = REPO_ROOT / "dataset" / "processed" / "retail_store_inventory_clean.csv"
+DATA_FILE = REPO_ROOT / "dataset" / "raw" / "retail_store_inventory.csv"
 FORECAST_FILE = (
     REPO_ROOT
     / "python-ai"
@@ -141,7 +141,7 @@ def main():
     print("=" * 65)
 
     if not DATA_FILE.is_file():
-        raise FileNotFoundError(f"Processed dataset not found: {DATA_FILE}")
+       raise FileNotFoundError(f"Inventory dataset not found: {DATA_FILE}")
     if not FORECAST_FILE.is_file():
         raise FileNotFoundError(
             f"Forecast outputs not found: {FORECAST_FILE}. "

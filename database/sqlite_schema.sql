@@ -34,3 +34,52 @@ CREATE INDEX IF NOT EXISTS idx_inventory_store_product
 
 CREATE INDEX IF NOT EXISTS idx_inventory_category
     ON inventory_records(category);
+
+-- ==========================================
+-- PRODUCT SKU MANAGEMENT
+-- ==========================================
+
+CREATE TABLE IF NOT EXISTS products (
+    product_id TEXT PRIMARY KEY,
+    sku_code TEXT NOT NULL UNIQUE
+);
+
+-- ==========================================
+-- SPOILAGE RECORDS
+-- ==========================================
+
+CREATE TABLE IF NOT EXISTS spoilage_records (
+    spoilage_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    record_date TEXT NOT NULL,
+    store_id TEXT NOT NULL,
+    product_id TEXT NOT NULL,
+    quantity INTEGER NOT NULL CHECK (quantity > 0),
+    reason TEXT NOT NULL,
+    FOREIGN KEY (product_id)
+        REFERENCES products(product_id)
+);
+
+-- ==========================================
+-- DAMAGE RECORDS
+-- ==========================================
+
+CREATE TABLE IF NOT EXISTS damage_records (
+    damage_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    record_date TEXT NOT NULL,
+    store_id TEXT NOT NULL,
+    product_id TEXT NOT NULL,
+    quantity INTEGER NOT NULL CHECK (quantity > 0),
+    reason TEXT NOT NULL,
+    FOREIGN KEY (product_id)
+        REFERENCES products(product_id)
+);
+
+-- ==========================================
+-- STOCK LOSS INDEXES
+-- ==========================================
+
+CREATE INDEX IF NOT EXISTS idx_spoilage_product
+    ON spoilage_records(product_id);
+
+CREATE INDEX IF NOT EXISTS idx_damage_product
+    ON damage_records(product_id);

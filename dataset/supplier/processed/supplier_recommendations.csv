@@ -1,0 +1,302 @@
+product_id,product_name,category,stock_level,product_price,supplier_id,supplier_name,contact_email,phone,lead_time_days,minimum_order_quantity,supply_frequency_days,lead_time_score,moq_score,supply_frequency_score,recommendation_score,recommendation_status,rank
+1,Modern Monitor,health,,26.08,39,Beacon Logistics,,+1-404-555-0157,13,39,5,1.0,1.0,1.0,100.0,COMPARED_SUPPLIER,1
+1,Modern Monitor,health,,26.08,35,Willow Group,deniz.jansen@example.net,+1-214-555-0116,18,54,9,0.0,0.0,0.0,0.0,COMPARED_SUPPLIER,2
+2,Smart Charger,grocery clothing,936.0,606.34,15,Ridge Holdings,tariq.schmidt@example.org,+1-702-555-0131,21,60,7,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+3,Heavy Duty Camera,garden automotive,153.0,,24,Juniper Media,,+1-416-555-0134,12,44,9,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+4,Deluxe Speaker,books,351.0,55.38,32,Oak Media,hannah.smith@example.org,+1-212-555-0168,18,73,7,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+5,Eco Planter,toys electronics,146.0,304.77,18,Clear Works,omar.murphy@example.com,+1-617-555-0127,13,56,9,1.0,0.0,0.0,50.0,COMPARED_SUPPLIER,1
+5,Eco Planter,toys electronics,146.0,304.77,8,Keystone Systems,liam.klein@example.org,+1-972-555-0152,19,31,7,0.0,1.0,1.0,50.0,COMPARED_SUPPLIER,2
+6,Modern Backpack,health,,97.25,8,Keystone Systems,liam.klein@example.org,+1-972-555-0152,15,36,5,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+7,Heavy Duty Kettle,furniture clothing,468.0,535.91,4,Forge Studio,karim.singh@example.org,+1-702-555-0112,18,31,8,1.0,0.0,1.0,70.0,COMPARED_SUPPLIER,1
+7,Heavy Duty Kettle,furniture clothing,468.0,535.91,31,Willow Studio,emma.wagner@example.com,+1-801-555-0154,19,30,10,0.0,1.0,0.0,30.0,COMPARED_SUPPLIER,2
+8,Pro Mug,music jewelry,542.0,143.65,25,Beacon Energy,sofia.diaz@example.com,+1-214-555-0125,9,28,8,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+9,Standard Bottle,health,756.0,542.24,37,Meridian Energy,anna.diaz@example.org,+1-503-555-0110,16,63,8,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+10,Modern Toolkit,kitchen accessories,,,1,Harbor Foods,chloe.baker@example.com,+1-702-555-0139,7,70,7,1.0,0.0,1.0,70.0,COMPARED_SUPPLIER,1
+10,Modern Toolkit,kitchen accessories,,,35,Willow Group,deniz.jansen@example.net,+1-214-555-0116,20,44,8,0.0,1.0,0.0,30.0,COMPARED_SUPPLIER,2
+11,Deluxe Pan,books accessories automotive,890.0,95.45,29,Ridge Works,victor.carter@example.net,+1-214-555-0194,17,32,9,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+12,Smart Notebook,,287.0,631.4,48,Compass Digital,,+1-415-555-0146,11,50,7,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+13,Wireless Notebook,kitchen electronics,500.0,,21,Pine Foods,elena.cruz@example.net,+1-202-555-0110,22,43,5,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+14,Smart Jacket,pet,,15.22,50,Ridge Partners,karim.walker@example.net,,14,43,5,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+15,Portable Mug,jewelry,43.0,339.06,22,Cobalt Logistics,uma.ahmed@example.org,+1-469-555-0108,14,58,9,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+16,Portable Pan,automotive,679.0,182.18,46,Iron Software,ethan.chen@example.org,+1-617-555-0157,20,49,7,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+17,Deluxe Kettle,,466.0,541.54,44,Atlas Digital,grace.wagner@example.net,+1-202-555-0122,18,47,7,0.625,1.0,1.0,81.25,COMPARED_SUPPLIER,1
+17,Deluxe Kettle,,466.0,541.54,15,Ridge Holdings,tariq.schmidt@example.org,+1-702-555-0131,15,48,11,1.0,0.5,0.0,65.0,COMPARED_SUPPLIER,2
+17,Deluxe Kettle,,466.0,541.54,40,Field Health,chen.cruz@example.org,+1-404-555-0188,23,49,8,0.0,0.0,0.75,15.000000000000002,COMPARED_SUPPLIER,3
+18,Ultra Backpack,clothing automotive beauty,629.0,345.02,12,Delta Digital,deniz.costa@example.com,+1-202-555-0137,11,44,9,1.0,1.0,0.0,80.0,COMPARED_SUPPLIER,1
+18,Ultra Backpack,clothing automotive beauty,629.0,345.02,43,Atlas Media,ivan.gupta@example.com,+1-612-555-0120,15,47,8,0.0,0.0,1.0,20.0,COMPARED_SUPPLIER,2
+19,Eco Mug,jewelry footwear,444.0,919.03,40,Field Health,chen.cruz@example.org,+1-404-555-0188,9,51,8,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+20,Folding Jacket,clothing,64.0,267.45,50,Ridge Partners,karim.walker@example.net,,12,47,7,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+21,Modern Planter,clothing,58.0,576.0,18,Clear Works,omar.murphy@example.com,+1-617-555-0127,15,38,5,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+22,Insulated Toolkit,clothing kitchen,229.0,17.75,15,Ridge Holdings,tariq.schmidt@example.org,+1-702-555-0131,9,50,9,1.0,1.0,0.0,80.0,COMPARED_SUPPLIER,1
+22,Insulated Toolkit,clothing kitchen,229.0,17.75,10,Iron Energy,hannah.khan@example.com,+1-214-555-0168,10,53,7,0.0,0.0,1.0,20.0,COMPARED_SUPPLIER,2
+23,Standard Charger,outdoor,288.0,,36,Apex Holdings,,+1-469-555-0127,20,57,6,1.0,1.0,1.0,100.0,COMPARED_SUPPLIER,1
+23,Standard Charger,outdoor,288.0,,46,Iron Software,ethan.chen@example.org,+1-617-555-0157,23,65,6,0.0,0.0,1.0,20.0,COMPARED_SUPPLIER,2
+24,Folding Charger,,734.0,642.57,25,Beacon Energy,sofia.diaz@example.com,+1-214-555-0125,17,54,7,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+25,Pro Pan,outdoor books electronics,923.0,288.68,48,Compass Digital,,+1-415-555-0146,7,32,9,1.0,1.0,1.0,100.0,COMPARED_SUPPLIER,1
+25,Pro Pan,outdoor books electronics,923.0,288.68,7,Vector Software,selin.davis@example.com,+1-702-555-0160,14,38,11,0.0,0.0,0.0,0.0,COMPARED_SUPPLIER,2
+26,Mini Camera,beauty,8.0,949.85,16,Cedar Energy,daniel.kaya@example.org,+1-612-555-0186,15,61,7,1.0,0.0,1.0,70.0,COMPARED_SUPPLIER,1
+26,Mini Camera,beauty,8.0,949.85,24,Juniper Media,,+1-416-555-0134,16,38,8,0.5,1.0,0.5,65.0,COMPARED_SUPPLIER,2
+26,Mini Camera,beauty,8.0,949.85,21,Pine Foods,elena.cruz@example.net,+1-202-555-0110,17,48,9,0.0,0.5652173913043478,0.0,16.956521739130434,COMPARED_SUPPLIER,3
+27,Eco Tent,accessories footwear clothing,851.0,162.1,3,Vector Works,lucas.brown@example.com,+1-512-555-0164,22,45,9,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+28,Premium Mug,,621.0,193.41,48,Compass Digital,,+1-415-555-0146,13,56,9,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+29,Mini Headphones,furniture,654.0,989.36,39,Beacon Logistics,,+1-404-555-0157,20,32,11,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+30,Standard Tripod,,820.0,261.38,11,Beacon Studio,uma.flores@example.com,+1-857-555-0107,18,59,5,1.0,0.0,1.0,70.0,COMPARED_SUPPLIER,1
+30,Standard Tripod,,820.0,261.38,15,Ridge Holdings,tariq.schmidt@example.org,+1-702-555-0131,19,35,8,0.0,1.0,0.0,30.0,COMPARED_SUPPLIER,2
+31,Folding Chair,sports clothing,887.0,678.77,42,Field Industries,omar.lee@example.com,+1-713-555-0194,11,47,6,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+32,Premium Headphones,video,904.0,80.18,47,Orbit Industries,omar.gupta@example.net,+1-404-555-0124,19,51,5,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+33,Essential Chair,outdoor accessories sports,512.0,31.77,49,Harbor Works,jack.fischer@example.net,+1-212-555-0148,13,24,7,1.0,1.0,1.0,100.0,COMPARED_SUPPLIER,1
+33,Essential Chair,outdoor accessories sports,512.0,31.77,16,Cedar Energy,daniel.kaya@example.org,+1-612-555-0186,13,40,9,1.0,0.4482758620689655,0.0,63.44827586206896,COMPARED_SUPPLIER,2
+33,Essential Chair,outdoor accessories sports,512.0,31.77,20,Cobalt Logistics,sofia.gomez@example.net,+1-213-555-0157,16,53,7,0.0,0.0,1.0,20.0,COMPARED_SUPPLIER,3
+34,Insulated Blender,,646.0,243.3,1,Harbor Foods,chloe.baker@example.com,+1-702-555-0139,13,41,6,1.0,0.0,1.0,70.0,COMPARED_SUPPLIER,1
+34,Insulated Blender,,646.0,243.3,16,Cedar Energy,daniel.kaya@example.org,+1-612-555-0186,16,35,6,0.0,1.0,1.0,50.0,COMPARED_SUPPLIER,2
+35,Ultra Tent,garden,421.0,27.75,29,Ridge Works,victor.carter@example.net,+1-214-555-0194,21,49,6,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+36,Ultra Keyboard,beauty,596.0,238.3,14,Ember Works,ben.adams@example.com,+1-415-555-0157,21,39,5,0.5,1.0,0.6,67.0,COMPARED_SUPPLIER,1
+36,Ultra Keyboard,beauty,596.0,238.3,45,Beacon Logistics,sven.nguyen@example.org,+1-905-555-0106,20,52,8,1.0,0.5517241379310345,0.0,66.55172413793103,COMPARED_SUPPLIER,2
+36,Ultra Keyboard,beauty,596.0,238.3,34,Apex Software,diego.carter@example.org,,22,68,3,0.0,0.0,1.0,20.0,COMPARED_SUPPLIER,3
+37,Classic Chair,garden,643.0,528.64,38,North Logistics,jade.smith@example.org,+1-469-555-0161,18,62,4,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+38,Heavy Duty Router,electronics kitchen books,,517.54,9,Bright Labs,ruby.kowalski@example.com,+1-512-555-0105,13,56,10,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+39,Ultra Chair,music kitchen,,394.84,50,Ridge Partners,karim.walker@example.net,,22,42,7,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+40,Slim Backpack,outdoor kitchen furniture,47.0,822.17,41,Bright Labs,jack.fischer@example.com,+1-415-555-0148,9,50,6,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+41,Portable Charger,video jewelry,706.0,808.32,3,Vector Works,lucas.brown@example.com,+1-512-555-0164,12,45,7,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+42,Deluxe Notebook,,,441.86,28,Compass Studio,ruby.klein@example.com,+1-972-555-0143,14,39,6,1.0,0.6818181818181818,1.0,90.45454545454545,COMPARED_SUPPLIER,1
+42,Deluxe Notebook,,,441.86,14,Ember Works,ben.adams@example.com,+1-415-555-0157,21,32,8,0.0,1.0,0.3333333333333333,36.666666666666664,COMPARED_SUPPLIER,2
+42,Deluxe Notebook,,,441.86,22,Cobalt Logistics,uma.ahmed@example.org,+1-469-555-0108,21,54,9,0.0,0.0,0.0,0.0,COMPARED_SUPPLIER,3
+43,Compact Lantern,automotive health sports,284.0,330.46,18,Clear Works,omar.murphy@example.com,+1-617-555-0127,15,49,7,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+44,Travel Charger,kitchen garden clothing,167.0,1.02,33,Bright Health,daniel.klein@example.org,+1-713-555-0128,7,45,9,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+45,Mini Camera,video,195.0,67.5,18,Clear Works,omar.murphy@example.com,+1-617-555-0127,15,34,6,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+46,Compact Lantern,sports music,407.0,73.77,17,Blue Systems,ibrahim.hassan@example.net,+1-312-555-0173,21,57,11,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+47,Slim Kettle,automotive music,345.0,39.97,31,Willow Studio,emma.wagner@example.com,+1-801-555-0154,12,89,3,1.0,0.0,1.0,70.0,COMPARED_SUPPLIER,1
+47,Slim Kettle,automotive music,345.0,39.97,47,Orbit Industries,omar.gupta@example.net,+1-404-555-0124,15,33,8,0.0,1.0,0.0,30.0,COMPARED_SUPPLIER,2
+48,Essential Monitor,accessories,919.0,540.7,30,Summit Health,hugo.pereira@example.org,+1-702-555-0179,20,37,8,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+49,Essential Planter,clothing jewelry,124.0,120.11,20,Cobalt Logistics,sofia.gomez@example.net,+1-213-555-0157,18,69,8,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+50,Pro Charger,clothing furniture beauty,705.0,2.56,38,North Logistics,jade.smith@example.org,+1-469-555-0161,21,51,7,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+51,Deluxe Notebook,accessories clothing pet,,930.52,13,River Partners,sofia.kim@example.net,+1-303-555-0149,11,52,8,1.0,1.0,0.0,80.0,COMPARED_SUPPLIER,1
+51,Deluxe Notebook,accessories clothing pet,,930.52,47,Orbit Industries,omar.gupta@example.net,+1-404-555-0124,21,58,5,0.0,0.0,1.0,20.0,COMPARED_SUPPLIER,2
+52,Travel Watch,jewelry,857.0,337.34,32,Oak Media,hannah.smith@example.org,+1-212-555-0168,15,52,5,0.5,1.0,1.0,75.0,COMPARED_SUPPLIER,1
+52,Travel Watch,jewelry,857.0,337.34,41,Bright Labs,jack.fischer@example.com,+1-415-555-0148,12,76,9,1.0,0.0,0.0,50.0,COMPARED_SUPPLIER,2
+52,Travel Watch,jewelry,857.0,337.34,20,Cobalt Logistics,sofia.gomez@example.net,+1-213-555-0157,18,62,9,0.0,0.5833333333333334,0.0,17.5,COMPARED_SUPPLIER,3
+53,Slim Notebook,health grocery,66.0,59.42,25,Beacon Energy,sofia.diaz@example.com,+1-214-555-0125,14,43,7,1.0,1.0,0.0,80.0,COMPARED_SUPPLIER,1
+53,Slim Notebook,health grocery,66.0,59.42,11,Beacon Studio,uma.flores@example.com,+1-857-555-0107,20,48,5,0.0,0.0,1.0,20.0,COMPARED_SUPPLIER,2
+54,Ultra Umbrella,pet,924.0,899.26,11,Beacon Studio,uma.flores@example.com,+1-857-555-0107,15,73,9,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+55,Slim Keyboard,pet video,105.0,190.86,25,Beacon Energy,sofia.diaz@example.com,+1-214-555-0125,21,54,7,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+56,Eco Tent,,995.0,59.49,25,Beacon Energy,sofia.diaz@example.com,+1-214-555-0125,15,66,7,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+57,Essential Umbrella,grocery,123.0,873.74,46,Iron Software,ethan.chen@example.org,+1-617-555-0157,19,28,7,0.5714285714285714,1.0,1.0,78.57142857142856,COMPARED_SUPPLIER,1
+57,Essential Umbrella,grocery,123.0,873.74,37,Meridian Energy,anna.diaz@example.org,+1-503-555-0110,16,50,9,1.0,0.15384615384615385,0.3333333333333333,61.282051282051285,COMPARED_SUPPLIER,2
+57,Essential Umbrella,grocery,123.0,873.74,12,Delta Digital,deniz.costa@example.com,+1-202-555-0137,23,54,10,0.0,0.0,0.0,0.0,COMPARED_SUPPLIER,3
+58,Classic Backpack,sports,985.0,521.89,12,Delta Digital,deniz.costa@example.com,+1-202-555-0137,14,62,5,1.0,1.0,1.0,100.0,COMPARED_SUPPLIER,1
+58,Classic Backpack,sports,985.0,521.89,31,Willow Studio,emma.wagner@example.com,+1-801-555-0154,15,69,8,0.0,0.0,0.0,0.0,COMPARED_SUPPLIER,2
+59,Compact Camera,automotive,996.0,1.29,28,Compass Studio,ruby.klein@example.com,+1-972-555-0143,14,54,9,0.5714285714285714,1.0,0.2,62.57142857142857,COMPARED_SUPPLIER,1
+59,Compact Camera,automotive,996.0,1.29,26,Lantern Group,laura.ahmed@example.net,+1-917-555-0116,11,73,10,1.0,0.0,0.0,50.0,COMPARED_SUPPLIER,2
+59,Compact Camera,automotive,996.0,1.29,37,Meridian Energy,anna.diaz@example.org,+1-503-555-0110,18,72,5,0.0,0.05263157894736842,1.0,21.578947368421055,COMPARED_SUPPLIER,3
+60,Standard Jacket,outdoor furniture music,,9.46,25,Beacon Energy,sofia.diaz@example.com,+1-214-555-0125,10,47,8,1.0,0.3,0.0,59.0,COMPARED_SUPPLIER,1
+60,Standard Jacket,outdoor furniture music,,9.46,37,Meridian Energy,anna.diaz@example.org,+1-503-555-0110,23,33,4,0.0,1.0,1.0,50.0,COMPARED_SUPPLIER,2
+60,Standard Jacket,outdoor furniture music,,9.46,50,Ridge Partners,karim.walker@example.net,,19,53,8,0.3076923076923077,0.0,0.0,15.384615384615385,COMPARED_SUPPLIER,3
+61,Mini Mug,home furniture jewelry,674.0,4.27,26,Lantern Group,laura.ahmed@example.net,+1-917-555-0116,15,41,8,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+62,Folding Camera,,460.0,415.81,3,Vector Works,lucas.brown@example.com,+1-512-555-0164,20,52,5,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+63,Pro Backpack,kitchen automotive,749.0,448.31,18,Clear Works,omar.murphy@example.com,+1-617-555-0127,7,41,8,1.0,0.1,1.0,73.0,COMPARED_SUPPLIER,1
+63,Pro Backpack,kitchen automotive,749.0,448.31,12,Delta Digital,deniz.costa@example.com,+1-202-555-0137,10,32,11,0.4,1.0,0.0,50.0,COMPARED_SUPPLIER,2
+63,Pro Backpack,kitchen automotive,749.0,448.31,7,Vector Software,selin.davis@example.com,+1-702-555-0160,12,42,8,0.0,0.0,1.0,20.0,COMPARED_SUPPLIER,3
+64,Compact Pan,video,692.0,2.74,28,Compass Studio,ruby.klein@example.com,+1-972-555-0143,10,58,8,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+65,Vintage Charger,grocery,,188.92,3,Vector Works,lucas.brown@example.com,+1-512-555-0164,13,69,8,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+66,Wireless Chair,grocery,850.0,311.09,20,Cobalt Logistics,sofia.gomez@example.net,+1-213-555-0157,21,38,9,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+67,Wireless Desk Lamp,footwear,,903.97,1,Harbor Foods,chloe.baker@example.com,+1-702-555-0139,20,28,5,0.0,1.0,1.0,50.0,COMPARED_SUPPLIER,1
+67,Wireless Desk Lamp,footwear,,903.97,12,Delta Digital,deniz.costa@example.com,+1-202-555-0137,15,56,8,1.0,0.0,0.0,50.0,COMPARED_SUPPLIER,2
+68,Mini Toolkit,sports automotive,403.0,83.75,12,Delta Digital,deniz.costa@example.com,+1-202-555-0137,10,46,6,1.0,0.8888888888888888,1.0,96.66666666666666,COMPARED_SUPPLIER,1
+68,Mini Toolkit,sports automotive,403.0,83.75,35,Willow Group,deniz.jansen@example.net,+1-214-555-0116,13,43,6,0.7692307692307693,1.0,1.0,88.46153846153845,COMPARED_SUPPLIER,2
+68,Mini Toolkit,sports automotive,403.0,83.75,29,Ridge Works,victor.carter@example.net,+1-214-555-0194,23,70,9,0.0,0.0,0.0,0.0,COMPARED_SUPPLIER,3
+69,Eco Blender,jewelry software accessories,308.0,828.81,18,Clear Works,omar.murphy@example.com,+1-617-555-0127,16,36,12,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+70,Essential Chair,beauty,788.0,714.92,11,Beacon Studio,uma.flores@example.com,+1-857-555-0107,13,46,7,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+71,Classic Lantern,music,811.0,355.65,50,Ridge Partners,karim.walker@example.net,,16,79,7,1.0,0.0,1.0,70.0,COMPARED_SUPPLIER,1
+71,Classic Lantern,music,811.0,355.65,27,Bright Industries,hana.hansen@example.com,+1-416-555-0196,20,26,10,0.0,1.0,0.0,30.0,COMPARED_SUPPLIER,2
+72,Essential Umbrella,toys,161.0,,19,Cobalt Analytics,olivia.martin@example.net,+1-503-555-0197,10,42,7,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+73,Compact Monitor,sports accessories electronics,421.0,481.39,18,Clear Works,omar.murphy@example.com,+1-617-555-0127,9,26,13,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+74,Compact Desk Lamp,,,718.27,38,North Logistics,jade.smith@example.org,+1-469-555-0161,11,30,6,1.0,1.0,0.6666666666666666,93.33333333333333,COMPARED_SUPPLIER,1
+74,Compact Desk Lamp,,,718.27,42,Field Industries,omar.lee@example.com,+1-713-555-0194,14,57,10,0.4,0.20588235294117646,0.0,26.176470588235297,COMPARED_SUPPLIER,2
+74,Compact Desk Lamp,,,718.27,21,Pine Foods,elena.cruz@example.net,+1-202-555-0110,16,64,4,0.0,0.0,1.0,20.0,COMPARED_SUPPLIER,3
+75,Wireless Lantern,garden health,6.0,604.37,6,Meridian Group,jonas.reyes@example.org,+1-612-555-0100,14,48,7,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+76,Smart Camera,sports,635.0,181.76,38,North Logistics,jade.smith@example.org,+1-469-555-0161,13,55,4,1.0,1.0,1.0,100.0,COMPARED_SUPPLIER,1
+76,Smart Camera,sports,635.0,181.76,4,Forge Studio,karim.singh@example.org,+1-702-555-0112,17,67,8,0.42857142857142855,0.0,0.0,21.428571428571427,COMPARED_SUPPLIER,2
+76,Smart Camera,sports,635.0,181.76,3,Vector Works,lucas.brown@example.com,+1-512-555-0164,20,66,6,0.0,0.08333333333333333,0.5,12.5,COMPARED_SUPPLIER,3
+77,Insulated Blender,,54.0,549.47,11,Beacon Studio,uma.flores@example.com,+1-857-555-0107,12,62,6,1.0,0.0,1.0,70.0,COMPARED_SUPPLIER,1
+77,Insulated Blender,,54.0,549.47,40,Field Health,chen.cruz@example.org,+1-404-555-0188,15,44,9,0.0,1.0,0.0,30.0,COMPARED_SUPPLIER,2
+78,Premium Charger,pet outdoor beauty,714.0,,4,Forge Studio,karim.singh@example.org,+1-702-555-0112,15,53,7,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+79,Deluxe Blender,software toys kitchen,802.0,812.82,29,Ridge Works,victor.carter@example.net,+1-214-555-0194,11,73,8,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+80,Modern Keyboard,grocery music,167.0,13.17,40,Field Health,chen.cruz@example.org,+1-404-555-0188,19,53,8,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+81,Insulated Charger,footwear,202.0,11.82,14,Ember Works,ben.adams@example.com,+1-415-555-0157,13,42,8,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+82,Classic Desk Lamp,kitchen,414.0,51.21,5,Summit Digital,kai.reyes@example.com,+1-702-555-0148,11,38,9,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+83,Folding Tent,video,875.0,7.24,39,Beacon Logistics,,+1-404-555-0157,13,26,9,1.0,1.0,0.0,80.0,COMPARED_SUPPLIER,1
+83,Folding Tent,video,875.0,7.24,42,Field Industries,omar.lee@example.com,+1-713-555-0194,13,35,9,1.0,0.5,0.0,65.0,COMPARED_SUPPLIER,2
+83,Folding Tent,video,875.0,7.24,7,Vector Software,selin.davis@example.com,+1-702-555-0160,20,44,7,0.0,0.0,1.0,20.0,COMPARED_SUPPLIER,3
+84,Pro Lantern,beauty,501.0,7.89,49,Harbor Works,jack.fischer@example.net,+1-212-555-0148,22,43,5,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+85,Wireless Notebook,grocery software clothing,436.0,191.43,5,Summit Digital,kai.reyes@example.com,+1-702-555-0148,4,46,5,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+86,Wireless Charger,outdoor video accessories,921.0,773.54,21,Pine Foods,elena.cruz@example.net,+1-202-555-0110,14,48,8,1.0,1.0,0.0,80.0,COMPARED_SUPPLIER,1
+86,Wireless Charger,outdoor video accessories,921.0,773.54,34,Apex Software,diego.carter@example.org,,24,53,5,0.0,0.0,1.0,20.0,COMPARED_SUPPLIER,2
+87,Slim Headphones,music toys pet,842.0,59.18,18,Clear Works,omar.murphy@example.com,+1-617-555-0127,24,41,9,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+88,Travel Router,home software footwear,198.0,528.07,46,Iron Software,ethan.chen@example.org,+1-617-555-0157,16,28,9,1.0,1.0,0.0,80.0,COMPARED_SUPPLIER,1
+88,Travel Router,home software footwear,198.0,528.07,49,Harbor Works,jack.fischer@example.net,+1-212-555-0148,19,44,8,0.625,0.0,0.3333333333333333,37.916666666666664,COMPARED_SUPPLIER,2
+88,Travel Router,home software footwear,198.0,528.07,22,Cobalt Logistics,uma.ahmed@example.org,+1-469-555-0108,24,35,6,0.0,0.5625,1.0,36.875,COMPARED_SUPPLIER,3
+89,Essential Kettle,video toys,425.0,,50,Ridge Partners,karim.walker@example.net,,11,46,7,1.0,0.0,1.0,70.0,COMPARED_SUPPLIER,1
+89,Essential Kettle,video toys,425.0,,48,Compass Digital,,+1-415-555-0146,20,44,12,0.0,1.0,0.0,30.0,COMPARED_SUPPLIER,2
+90,Compact Backpack,,948.0,191.83,32,Oak Media,hannah.smith@example.org,+1-212-555-0168,17,56,8,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+91,Compact Bottle,beauty,819.0,16.96,47,Orbit Industries,omar.gupta@example.net,+1-404-555-0124,11,64,10,1.0,0.2916666666666667,0.0,58.75,COMPARED_SUPPLIER,1
+91,Compact Bottle,beauty,819.0,16.96,5,Summit Digital,kai.reyes@example.com,+1-702-555-0148,21,30,6,0.0,1.0,1.0,50.0,COMPARED_SUPPLIER,2
+91,Compact Bottle,beauty,819.0,16.96,25,Beacon Energy,sofia.diaz@example.com,+1-214-555-0125,21,78,9,0.0,0.0,0.25,5.0,COMPARED_SUPPLIER,3
+92,Premium Lantern,pet,442.0,386.21,12,Delta Digital,deniz.costa@example.com,+1-202-555-0137,10,73,7,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+93,Mini Chair,books home video,938.0,100.15,6,Meridian Group,jonas.reyes@example.org,+1-612-555-0100,17,44,5,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+94,Essential Backpack,sports kitchen home,143.0,997.18,10,Iron Energy,hannah.khan@example.com,+1-214-555-0168,20,56,5,0.0,1.0,1.0,50.0,COMPARED_SUPPLIER,1
+94,Essential Backpack,sports kitchen home,143.0,997.18,44,Atlas Digital,grace.wagner@example.net,+1-202-555-0122,12,66,7,1.0,0.0,0.0,50.0,COMPARED_SUPPLIER,2
+95,Premium Watch,electronics toys,736.0,,30,Summit Health,hugo.pereira@example.org,+1-702-555-0179,17,56,7,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+96,Travel Tripod,electronics,864.0,740.08,13,River Partners,sofia.kim@example.net,+1-303-555-0149,12,60,9,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+97,Eco Bottle,home,24.0,298.96,50,Ridge Partners,karim.walker@example.net,,16,66,6,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+98,Heavy Duty Camera,automotive health software,773.0,634.06,26,Lantern Group,laura.ahmed@example.net,+1-917-555-0116,17,20,6,1.0,1.0,1.0,100.0,COMPARED_SUPPLIER,1
+98,Heavy Duty Camera,automotive health software,773.0,634.06,31,Willow Studio,emma.wagner@example.com,+1-801-555-0154,18,33,11,0.0,0.7346938775510204,0.0,22.040816326530614,COMPARED_SUPPLIER,2
+98,Heavy Duty Camera,automotive health software,773.0,634.06,37,Meridian Energy,anna.diaz@example.org,+1-503-555-0110,18,69,9,0.0,0.0,0.4,8.000000000000002,COMPARED_SUPPLIER,3
+99,Classic Desk Lamp,grocery,140.0,769.54,3,Vector Works,lucas.brown@example.com,+1-512-555-0164,22,54,4,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+100,Ultra Kettle,pet beauty,112.0,286.57,24,Juniper Media,,+1-416-555-0134,9,44,7,1.0,1.0,0.0,80.0,COMPARED_SUPPLIER,1
+100,Ultra Kettle,pet beauty,112.0,286.57,19,Cobalt Analytics,olivia.martin@example.net,+1-503-555-0197,13,68,6,0.0,0.0,1.0,20.0,COMPARED_SUPPLIER,2
+101,Insulated Charger,,902.0,330.05,50,Ridge Partners,karim.walker@example.net,,10,45,8,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+102,Classic Lantern,accessories beauty garden,174.0,20.68,49,Harbor Works,jack.fischer@example.net,+1-212-555-0148,14,61,8,1.0,0.375,1.0,81.25,COMPARED_SUPPLIER,1
+102,Classic Lantern,accessories beauty garden,174.0,20.68,2,Field Logistics,leo.wright@example.com,+1-312-555-0153,15,56,9,0.0,1.0,0.0,30.0,COMPARED_SUPPLIER,2
+102,Classic Lantern,accessories beauty garden,174.0,20.68,28,Compass Studio,ruby.klein@example.com,+1-972-555-0143,15,64,8,0.0,0.0,1.0,20.0,COMPARED_SUPPLIER,3
+103,Eco Speaker,video software music,218.0,,31,Willow Studio,emma.wagner@example.com,+1-801-555-0154,11,41,7,1.0,1.0,1.0,100.0,COMPARED_SUPPLIER,1
+103,Eco Speaker,video software music,218.0,,40,Field Health,chen.cruz@example.org,+1-404-555-0188,17,57,11,0.0,0.0,0.0,0.0,COMPARED_SUPPLIER,2
+104,Compact Mug,beauty toys grocery,102.0,145.91,20,Cobalt Logistics,sofia.gomez@example.net,+1-213-555-0157,12,36,8,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+105,Folding Tripod,automotive jewelry software,661.0,769.58,8,Keystone Systems,liam.klein@example.org,+1-972-555-0152,23,57,5,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+106,Deluxe Bottle,health,173.0,126.25,46,Iron Software,ethan.chen@example.org,+1-617-555-0157,16,57,7,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+107,Essential Jacket,,7.0,334.0,19,Cobalt Analytics,olivia.martin@example.net,+1-503-555-0197,7,35,5,1.0,0.0,1.0,70.0,COMPARED_SUPPLIER,1
+107,Essential Jacket,,7.0,334.0,15,Ridge Holdings,tariq.schmidt@example.org,+1-702-555-0131,20,32,8,0.0,1.0,0.0,30.0,COMPARED_SUPPLIER,2
+108,Slim Toolkit,automotive outdoor,574.0,213.68,29,Ridge Works,victor.carter@example.net,+1-214-555-0194,14,46,5,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+109,Modern Notebook,jewelry,480.0,7.53,29,Ridge Works,victor.carter@example.net,+1-214-555-0194,14,66,6,1.0,0.0,1.0,70.0,COMPARED_SUPPLIER,1
+109,Modern Notebook,jewelry,480.0,7.53,49,Harbor Works,jack.fischer@example.net,+1-212-555-0148,16,31,6,0.0,1.0,1.0,50.0,COMPARED_SUPPLIER,2
+110,Insulated Monitor,books footwear toys,118.0,352.51,43,Atlas Media,ivan.gupta@example.com,+1-612-555-0120,15,58,9,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+111,Folding Camera,software beauty,360.0,7.66,34,Apex Software,diego.carter@example.org,,12,27,5,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+112,Essential Charger,beauty jewelry health,344.0,876.96,11,Beacon Studio,uma.flores@example.com,+1-857-555-0107,17,45,9,1.0,1.0,0.0,80.0,COMPARED_SUPPLIER,1
+112,Essential Charger,beauty jewelry health,344.0,876.96,49,Harbor Works,jack.fischer@example.net,+1-212-555-0148,21,53,8,0.0,0.0,1.0,20.0,COMPARED_SUPPLIER,2
+113,Portable Watch,health,571.0,599.19,31,Willow Studio,emma.wagner@example.com,+1-801-555-0154,19,50,12,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+114,Insulated Tent,clothing sports books,600.0,2.21,38,North Logistics,jade.smith@example.org,+1-469-555-0161,11,43,10,1.0,1.0,0.0,80.0,COMPARED_SUPPLIER,1
+114,Insulated Tent,clothing sports books,600.0,2.21,7,Vector Software,selin.davis@example.com,+1-702-555-0160,12,52,3,0.0,0.0,1.0,20.0,COMPARED_SUPPLIER,2
+115,Compact Bottle,clothing toys pet,689.0,986.72,10,Iron Energy,hannah.khan@example.com,+1-214-555-0168,14,71,4,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+116,Modern Kettle,furniture sports,387.0,467.59,8,Keystone Systems,liam.klein@example.org,+1-972-555-0152,15,70,12,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+117,Pro Headphones,health,637.0,313.05,17,Blue Systems,ibrahim.hassan@example.net,+1-312-555-0173,17,73,8,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+118,Slim Notebook,home software,500.0,40.14,4,Forge Studio,karim.singh@example.org,+1-702-555-0112,12,35,8,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+119,Essential Desk Lamp,grocery,386.0,,38,North Logistics,jade.smith@example.org,+1-469-555-0161,7,50,8,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+120,Portable Tent,jewelry,838.0,284.25,28,Compass Studio,ruby.klein@example.com,+1-972-555-0143,16,45,11,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+121,Travel Pan,outdoor,267.0,833.44,46,Iron Software,ethan.chen@example.org,+1-617-555-0157,15,57,8,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+122,Insulated Pan,software footwear,151.0,,16,Cedar Energy,daniel.kaya@example.org,+1-612-555-0186,13,55,7,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+123,Travel Pan,toys,322.0,14.45,44,Atlas Digital,grace.wagner@example.net,+1-202-555-0122,20,58,6,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+124,Wireless Monitor,beauty,,491.68,22,Cobalt Logistics,uma.ahmed@example.org,+1-469-555-0108,10,37,11,1.0,1.0,0.0,80.0,COMPARED_SUPPLIER,1
+124,Wireless Monitor,beauty,,491.68,11,Beacon Studio,uma.flores@example.com,+1-857-555-0107,23,40,6,0.0,0.918918918918919,1.0,47.56756756756757,COMPARED_SUPPLIER,2
+124,Wireless Monitor,beauty,,491.68,9,Bright Labs,ruby.kowalski@example.com,+1-512-555-0105,23,74,9,0.0,0.0,0.4,8.000000000000002,COMPARED_SUPPLIER,3
+125,Smart Kettle,,589.0,70.03,27,Bright Industries,hana.hansen@example.com,+1-416-555-0196,20,50,6,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+126,Heavy Duty Keyboard,software,542.0,450.52,14,Ember Works,ben.adams@example.com,+1-415-555-0157,8,38,8,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+127,Insulated Headphones,sports outdoor software,738.0,869.82,24,Juniper Media,,+1-416-555-0134,16,62,8,0.0,1.0,1.0,50.0,COMPARED_SUPPLIER,1
+127,Insulated Headphones,sports outdoor software,738.0,869.82,47,Orbit Industries,omar.gupta@example.net,+1-404-555-0124,14,74,9,1.0,0.0,0.0,50.0,COMPARED_SUPPLIER,2
+128,Portable Router,outdoor jewelry electronics,471.0,,46,Iron Software,ethan.chen@example.org,+1-617-555-0157,13,70,7,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+129,Heavy Duty Monitor,beauty kitchen,41.0,284.63,31,Willow Studio,emma.wagner@example.com,+1-801-555-0154,20,44,4,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+130,Smart Toolkit,health beauty books,445.0,426.87,10,Iron Energy,hannah.khan@example.com,+1-214-555-0168,13,48,6,1.0,1.0,1.0,100.0,COMPARED_SUPPLIER,1
+130,Smart Toolkit,health beauty books,445.0,426.87,12,Delta Digital,deniz.costa@example.com,+1-202-555-0137,16,61,10,0.0,0.0,0.0,0.0,COMPARED_SUPPLIER,2
+131,Wireless Router,furniture books,320.0,909.37,9,Bright Labs,ruby.kowalski@example.com,+1-512-555-0105,14,54,7,1.0,1.0,1.0,100.0,COMPARED_SUPPLIER,1
+131,Wireless Router,furniture books,320.0,909.37,41,Bright Labs,jack.fischer@example.com,+1-415-555-0148,14,55,9,1.0,0.0,0.0,50.0,COMPARED_SUPPLIER,2
+132,Compact Notebook,electronics,,966.66,12,Delta Digital,deniz.costa@example.com,+1-202-555-0137,11,62,7,1.0,0.0,1.0,70.0,COMPARED_SUPPLIER,1
+132,Compact Notebook,electronics,,966.66,49,Harbor Works,jack.fischer@example.net,+1-212-555-0148,19,54,9,0.0,1.0,0.0,30.0,COMPARED_SUPPLIER,2
+133,Mini Blender,music outdoor,717.0,,27,Bright Industries,hana.hansen@example.com,+1-416-555-0196,9,31,5,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+134,Folding Notebook,health,327.0,245.57,13,River Partners,sofia.kim@example.net,+1-303-555-0149,13,65,8,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+135,Eco Pan,sports home grocery,545.0,,43,Atlas Media,ivan.gupta@example.com,+1-612-555-0120,15,52,8,1.0,1.0,1.0,100.0,COMPARED_SUPPLIER,1
+135,Eco Pan,sports home grocery,545.0,,34,Apex Software,diego.carter@example.org,,15,57,11,1.0,0.0,0.0,50.0,COMPARED_SUPPLIER,2
+136,Smart Headphones,toys,450.0,,35,Willow Group,deniz.jansen@example.net,+1-214-555-0116,12,54,8,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+137,Compact Speaker,electronics,247.0,303.81,43,Atlas Media,ivan.gupta@example.com,+1-612-555-0120,14,38,8,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+138,Ultra Mug,electronics,453.0,277.36,9,Bright Labs,ruby.kowalski@example.com,+1-512-555-0105,19,43,7,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+139,Slim Chair,furniture,496.0,924.84,28,Compass Studio,ruby.klein@example.com,+1-972-555-0143,25,58,7,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+140,Essential Bottle,grocery garden,750.0,926.2,12,Delta Digital,deniz.costa@example.com,+1-202-555-0137,15,61,3,0.8461538461538461,0.13793103448275862,1.0,66.44562334217508,COMPARED_SUPPLIER,1
+140,Essential Bottle,grocery garden,750.0,926.2,43,Atlas Media,ivan.gupta@example.com,+1-612-555-0120,13,65,9,1.0,0.0,0.0,50.0,COMPARED_SUPPLIER,2
+140,Essential Bottle,grocery garden,750.0,926.2,9,Bright Labs,ruby.kowalski@example.com,+1-512-555-0105,26,36,6,0.0,1.0,0.5,40.0,COMPARED_SUPPLIER,3
+141,Ultra Backpack,,951.0,682.38,12,Delta Digital,deniz.costa@example.com,+1-202-555-0137,9,41,6,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+142,Smart Router,music books,906.0,1.05,45,Beacon Logistics,sven.nguyen@example.org,+1-905-555-0106,20,23,7,1.0,1.0,1.0,100.0,COMPARED_SUPPLIER,1
+142,Smart Router,music books,906.0,1.05,21,Pine Foods,elena.cruz@example.net,+1-202-555-0110,21,38,7,0.0,0.0,1.0,20.0,COMPARED_SUPPLIER,2
+143,Mini Headphones,pet grocery outdoor,29.0,339.48,7,Vector Software,selin.davis@example.com,+1-702-555-0160,13,49,8,1.0,0.6,0.0,68.0,COMPARED_SUPPLIER,1
+143,Mini Headphones,pet grocery outdoor,29.0,339.48,28,Compass Studio,ruby.klein@example.com,+1-972-555-0143,19,47,7,0.0,1.0,0.3333333333333333,36.666666666666664,COMPARED_SUPPLIER,2
+143,Mini Headphones,pet grocery outdoor,29.0,339.48,48,Compass Digital,,+1-415-555-0146,18,52,5,0.16666666666666666,0.0,1.0,28.333333333333332,COMPARED_SUPPLIER,3
+144,Ultra Charger,jewelry kitchen clothing,265.0,310.81,10,Iron Energy,hannah.khan@example.com,+1-214-555-0168,10,49,6,1.0,0.3333333333333333,1.0,80.0,COMPARED_SUPPLIER,1
+144,Ultra Charger,jewelry kitchen clothing,265.0,310.81,38,North Logistics,jade.smith@example.org,+1-469-555-0161,16,29,8,0.45454545454545453,1.0,0.0,52.72727272727272,COMPARED_SUPPLIER,2
+144,Ultra Charger,jewelry kitchen clothing,265.0,310.81,15,Ridge Holdings,tariq.schmidt@example.org,+1-702-555-0131,21,59,6,0.0,0.0,1.0,20.0,COMPARED_SUPPLIER,3
+145,Vintage Pan,kitchen video toys,27.0,44.47,46,Iron Software,ethan.chen@example.org,+1-617-555-0157,19,29,11,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+146,Heavy Duty Camera,sports,537.0,29.65,34,Apex Software,diego.carter@example.org,,9,29,8,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+147,Portable Pan,sports furniture,119.0,459.18,47,Orbit Industries,omar.gupta@example.net,+1-404-555-0124,17,11,6,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+148,Travel Umbrella,sports,674.0,2.14,39,Beacon Logistics,,+1-404-555-0157,22,58,8,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+149,Mini Umbrella,sports outdoor software,377.0,31.29,32,Oak Media,hannah.smith@example.org,+1-212-555-0168,14,77,7,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+150,Compact Backpack,video,,567.2,16,Cedar Energy,daniel.kaya@example.org,+1-612-555-0186,9,80,4,1.0,0.0,1.0,70.0,COMPARED_SUPPLIER,1
+150,Compact Backpack,video,,567.2,23,Acme Partners,rafael.vargas@example.org,+1-702-555-0126,10,50,10,0.0,1.0,0.0,30.0,COMPARED_SUPPLIER,2
+151,Mini Router,furniture music home,971.0,668.3,49,Harbor Works,jack.fischer@example.net,+1-212-555-0148,21,57,4,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+152,Ultra Monitor,beauty,644.0,253.65,29,Ridge Works,victor.carter@example.net,+1-214-555-0194,13,48,7,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+153,Pro Chair,furniture footwear,774.0,588.56,24,Juniper Media,,+1-416-555-0134,18,54,10,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+154,Ultra Charger,,84.0,6.11,10,Iron Energy,hannah.khan@example.com,+1-214-555-0168,16,54,6,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+155,Heavy Duty Desk Lamp,footwear software,964.0,359.12,38,North Logistics,jade.smith@example.org,+1-469-555-0161,6,27,7,1.0,0.8181818181818182,0.3333333333333333,81.21212121212122,COMPARED_SUPPLIER,1
+155,Heavy Duty Desk Lamp,footwear software,964.0,359.12,29,Ridge Works,victor.carter@example.net,+1-214-555-0194,17,25,5,0.0,1.0,1.0,50.0,COMPARED_SUPPLIER,2
+155,Heavy Duty Desk Lamp,footwear software,964.0,359.12,27,Bright Industries,hana.hansen@example.com,+1-416-555-0196,17,36,8,0.0,0.0,0.0,0.0,COMPARED_SUPPLIER,3
+156,Smart Umbrella,kitchen clothing music,907.0,807.31,44,Atlas Digital,grace.wagner@example.net,+1-202-555-0122,12,37,9,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+157,Eco Jacket,music toys,117.0,934.65,5,Summit Digital,kai.reyes@example.com,+1-702-555-0148,21,47,8,0.0,1.0,1.0,50.0,COMPARED_SUPPLIER,1
+157,Eco Jacket,music toys,117.0,934.65,31,Willow Studio,emma.wagner@example.com,+1-801-555-0154,12,57,11,1.0,0.0,0.0,50.0,COMPARED_SUPPLIER,2
+158,Smart Notebook,,938.0,164.19,17,Blue Systems,ibrahim.hassan@example.net,+1-312-555-0173,10,55,9,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+159,Insulated Headphones,kitchen,595.0,178.9,8,Keystone Systems,liam.klein@example.org,+1-972-555-0152,19,45,7,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+160,Deluxe Keyboard,books home outdoor,379.0,,45,Beacon Logistics,sven.nguyen@example.org,+1-905-555-0106,20,55,6,1.0,0.0,1.0,70.0,COMPARED_SUPPLIER,1
+160,Deluxe Keyboard,books home outdoor,379.0,,32,Oak Media,hannah.smith@example.org,+1-212-555-0168,21,49,7,0.0,1.0,0.0,30.0,COMPARED_SUPPLIER,2
+161,Deluxe Backpack,accessories,,8.14,19,Cobalt Analytics,olivia.martin@example.net,+1-503-555-0197,15,56,9,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+162,Mini Watch,grocery outdoor accessories,497.0,898.5,6,Meridian Group,jonas.reyes@example.org,+1-612-555-0100,15,61,8,1.0,0.0,0.0,50.0,COMPARED_SUPPLIER,1
+162,Mini Watch,grocery outdoor accessories,497.0,898.5,35,Willow Group,deniz.jansen@example.net,+1-214-555-0116,22,48,7,0.0,1.0,1.0,50.0,COMPARED_SUPPLIER,2
+163,Wireless Jacket,outdoor,907.0,385.13,28,Compass Studio,ruby.klein@example.com,+1-972-555-0143,22,29,6,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+164,Standard Camera,garden grocery footwear,752.0,,29,Ridge Works,victor.carter@example.net,+1-214-555-0194,19,34,7,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+165,Mini Watch,furniture garden,626.0,33.36,40,Field Health,chen.cruz@example.org,+1-404-555-0188,17,49,6,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+166,Slim Tent,jewelry home sports,549.0,,40,Field Health,chen.cruz@example.org,+1-404-555-0188,12,34,9,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+167,Premium Backpack,books,139.0,330.82,25,Beacon Energy,sofia.diaz@example.com,+1-214-555-0125,24,46,9,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+168,Travel Camera,grocery jewelry sports,560.0,16.82,48,Compass Digital,,+1-415-555-0146,17,38,4,0.07692307692307693,1.0,1.0,53.846153846153854,COMPARED_SUPPLIER,1
+168,Travel Camera,grocery jewelry sports,560.0,16.82,30,Summit Health,hugo.pereira@example.org,+1-702-555-0179,5,45,8,1.0,0.0,0.0,50.0,COMPARED_SUPPLIER,2
+168,Travel Camera,grocery jewelry sports,560.0,16.82,34,Apex Software,diego.carter@example.org,,18,41,7,0.0,0.5714285714285714,0.25,22.142857142857142,COMPARED_SUPPLIER,3
+169,Compact Tripod,footwear home,832.0,294.09,35,Willow Group,deniz.jansen@example.net,+1-214-555-0116,12,56,7,1.0,1.0,0.0,80.0,COMPARED_SUPPLIER,1
+169,Compact Tripod,footwear home,832.0,294.09,40,Field Health,chen.cruz@example.org,+1-404-555-0188,12,72,6,1.0,0.0,1.0,70.0,COMPARED_SUPPLIER,2
+170,Portable Tent,health,844.0,594.11,12,Delta Digital,deniz.costa@example.com,+1-202-555-0137,18,82,8,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+171,Eco Jacket,furniture books outdoor,563.0,67.91,26,Lantern Group,laura.ahmed@example.net,+1-917-555-0116,10,46,5,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+172,Insulated Router,home electronics outdoor,644.0,455.4,31,Willow Studio,emma.wagner@example.com,+1-801-555-0154,15,43,11,1.0,1.0,0.0,80.0,COMPARED_SUPPLIER,1
+172,Insulated Router,home electronics outdoor,644.0,455.4,24,Juniper Media,,+1-416-555-0134,17,68,7,0.0,0.0,1.0,20.0,COMPARED_SUPPLIER,2
+173,Portable Kettle,furniture grocery,813.0,,6,Meridian Group,jonas.reyes@example.org,+1-612-555-0100,19,35,2,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+174,Mini Tent,books grocery,358.0,,27,Bright Industries,hana.hansen@example.com,+1-416-555-0196,14,47,6,1.0,0.7222222222222222,1.0,91.66666666666667,COMPARED_SUPPLIER,1
+174,Mini Tent,books grocery,358.0,,30,Summit Health,hugo.pereira@example.org,+1-702-555-0179,14,42,8,1.0,1.0,0.5,90.0,COMPARED_SUPPLIER,2
+174,Mini Tent,books grocery,358.0,,4,Forge Studio,karim.singh@example.org,+1-702-555-0112,15,60,10,0.0,0.0,0.0,0.0,COMPARED_SUPPLIER,3
+175,Eco Blender,accessories kitchen furniture,392.0,276.44,4,Forge Studio,karim.singh@example.org,+1-702-555-0112,7,43,9,1.0,1.0,0.0,80.0,COMPARED_SUPPLIER,1
+175,Eco Blender,accessories kitchen furniture,392.0,276.44,37,Meridian Energy,anna.diaz@example.org,+1-503-555-0110,15,49,6,0.0,0.0,1.0,20.0,COMPARED_SUPPLIER,2
+176,Pro Blender,grocery,148.0,249.18,2,Field Logistics,leo.wright@example.com,+1-312-555-0153,11,41,8,1.0,0.65,1.0,89.5,COMPARED_SUPPLIER,1
+176,Pro Blender,grocery,148.0,249.18,47,Orbit Industries,omar.gupta@example.net,+1-404-555-0124,14,34,10,0.0,1.0,0.0,30.0,COMPARED_SUPPLIER,2
+176,Pro Blender,grocery,148.0,249.18,30,Summit Health,hugo.pereira@example.org,+1-702-555-0179,13,54,10,0.3333333333333333,0.0,0.0,16.666666666666664,COMPARED_SUPPLIER,3
+177,Folding Umbrella,kitchen electronics software,,742.67,41,Bright Labs,jack.fischer@example.com,+1-415-555-0148,7,67,10,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+178,Insulated Backpack,books sports furniture,598.0,241.16,28,Compass Studio,ruby.klein@example.com,+1-972-555-0143,13,55,5,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+179,Smart Watch,outdoor grocery accessories,,561.96,47,Orbit Industries,omar.gupta@example.net,+1-404-555-0124,11,55,5,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+180,Modern Planter,health,593.0,39.86,11,Beacon Studio,uma.flores@example.com,+1-857-555-0107,13,43,4,1.0,1.0,1.0,100.0,COMPARED_SUPPLIER,1
+180,Modern Planter,health,593.0,39.86,8,Keystone Systems,liam.klein@example.org,+1-972-555-0152,15,71,5,0.0,0.0,0.0,0.0,COMPARED_SUPPLIER,2
+181,Mini Desk Lamp,electronics outdoor,920.0,15.59,15,Ridge Holdings,tariq.schmidt@example.org,+1-702-555-0131,17,63,7,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+182,Mini Backpack,pet,965.0,10.31,36,Apex Holdings,,+1-469-555-0127,14,52,9,1.0,1.0,0.0,80.0,COMPARED_SUPPLIER,1
+182,Mini Backpack,pet,965.0,10.31,48,Compass Digital,,+1-415-555-0146,22,68,7,0.0,0.0,1.0,20.0,COMPARED_SUPPLIER,2
+183,Wireless Jacket,accessories,769.0,688.88,29,Ridge Works,victor.carter@example.net,+1-214-555-0194,12,39,6,0.8333333333333334,1.0,1.0,91.66666666666667,COMPARED_SUPPLIER,1
+183,Wireless Jacket,accessories,769.0,688.88,11,Beacon Studio,uma.flores@example.com,+1-857-555-0107,11,51,8,1.0,0.5862068965517241,0.5,77.58620689655173,COMPARED_SUPPLIER,2
+183,Wireless Jacket,accessories,769.0,688.88,8,Keystone Systems,liam.klein@example.org,+1-972-555-0152,17,68,10,0.0,0.0,0.0,0.0,COMPARED_SUPPLIER,3
+184,Insulated Headphones,software,192.0,27.07,39,Beacon Logistics,,+1-404-555-0157,15,85,7,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+185,Wireless Mug,,283.0,599.48,24,Juniper Media,,+1-416-555-0134,15,53,9,1.0,0.0,1.0,70.0,COMPARED_SUPPLIER,1
+185,Wireless Mug,,283.0,599.48,5,Summit Digital,kai.reyes@example.com,+1-702-555-0148,18,27,10,0.0,1.0,0.0,30.0,COMPARED_SUPPLIER,2
+186,Premium Pan,software automotive grocery,247.0,477.54,2,Field Logistics,leo.wright@example.com,+1-312-555-0153,13,41,6,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+187,Compact Watch,beauty video,76.0,755.97,22,Cobalt Logistics,uma.ahmed@example.org,+1-469-555-0108,14,59,7,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+188,Wireless Toolkit,footwear,865.0,275.83,9,Bright Labs,ruby.kowalski@example.com,+1-512-555-0105,17,40,7,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+189,Wireless Camera,electronics clothing,358.0,172.99,47,Orbit Industries,omar.gupta@example.net,+1-404-555-0124,18,63,9,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+190,Vintage Speaker,toys video clothing,255.0,656.29,40,Field Health,chen.cruz@example.org,+1-404-555-0188,16,49,9,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+191,Standard Jacket,accessories automotive sports,329.0,222.29,2,Field Logistics,leo.wright@example.com,+1-312-555-0153,11,44,7,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+192,Smart Desk Lamp,automotive beauty outdoor,,932.17,46,Iron Software,ethan.chen@example.org,+1-617-555-0157,12,48,10,1.0,1.0,0.0,80.0,COMPARED_SUPPLIER,1
+192,Smart Desk Lamp,automotive beauty outdoor,,932.17,30,Summit Health,hugo.pereira@example.org,+1-702-555-0179,15,49,5,0.0,0.0,1.0,20.0,COMPARED_SUPPLIER,2
+193,Essential Charger,accessories kitchen,691.0,,41,Bright Labs,jack.fischer@example.com,+1-415-555-0148,11,71,8,1.0,0.0,1.0,70.0,COMPARED_SUPPLIER,1
+193,Essential Charger,accessories kitchen,691.0,,18,Clear Works,omar.murphy@example.com,+1-617-555-0127,15,33,8,0.0,1.0,1.0,50.0,COMPARED_SUPPLIER,2
+193,Essential Charger,accessories kitchen,691.0,,37,Meridian Energy,anna.diaz@example.org,+1-503-555-0110,13,52,11,0.5,0.5,0.0,40.0,COMPARED_SUPPLIER,3
+194,Premium Umbrella,electronics video garden,,73.6,40,Field Health,chen.cruz@example.org,+1-404-555-0188,25,50,5,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+195,Travel Keyboard,sports clothing,945.0,4.61,6,Meridian Group,jonas.reyes@example.org,+1-612-555-0100,11,55,6,1.0,0.0,1.0,70.0,COMPARED_SUPPLIER,1
+195,Travel Keyboard,sports clothing,945.0,4.61,20,Cobalt Logistics,sofia.gomez@example.net,+1-213-555-0157,18,42,7,0.0,1.0,0.0,30.0,COMPARED_SUPPLIER,2
+196,Premium Tripod,,38.0,,29,Ridge Works,victor.carter@example.net,+1-214-555-0194,12,54,8,1.0,0.0,1.0,70.0,COMPARED_SUPPLIER,1
+196,Premium Tripod,,38.0,,28,Compass Studio,ruby.klein@example.com,+1-972-555-0143,15,44,8,0.0,1.0,1.0,50.0,COMPARED_SUPPLIER,2
+197,Modern Chair,video,826.0,5.69,36,Apex Holdings,,+1-469-555-0127,14,43,4,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+198,Vintage Router,clothing jewelry,251.0,80.26,2,Field Logistics,leo.wright@example.com,+1-312-555-0153,14,68,6,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+199,Folding Toolkit,automotive,405.0,270.62,4,Forge Studio,karim.singh@example.org,+1-702-555-0112,10,41,9,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1
+200,Slim Tripod,electronics,569.0,229.3,32,Oak Media,hannah.smith@example.org,+1-212-555-0168,11,73,7,1.0,1.0,1.0,,ONLY_AVAILABLE_SUPPLIER,1

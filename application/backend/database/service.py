@@ -313,9 +313,193 @@ def get_inventory_summary() -> dict:
         "stores": stores,
         "products": products,
         "categories": categories,
+
     }
 
 
+from datetime import datetime
+
+
+def _validate_stock_loss_record(
+    record_date: str,
+    store_id: str,
+    product_id: str,
+    quantity: int,
+    reason: str,
+) -> None:
+    """Validate information before recording stock loss."""
+
+    try:
+        datetime.strptime(record_date, "%Y-%m-%d")
+    except (TypeError, ValueError):
+        raise ValueError("Date must use YYYY-MM-DD format.")
+
+    if not isinstance(store_id, str) or not store_id.strip():
+        raise ValueError("Store ID is required.")
+
+    if not isinstance(product_id, str) or not product_id.strip():
+        raise ValueError("Product ID is required.")
+
+    if (
+        isinstance(quantity, bool)
+        or not isinstance(quantity, int)
+        or quantity <= 0
+    ):
+        raise ValueError("Quantity must be a positive whole number.")
+
+    if not isinstance(reason, str) or not reason.strip():
+        raise ValueError("A reason must be provided.")
+
+
+def record_spoilage(
+    record_date: str,
+    store_id: str,
+    product_id: str,
+    quantity: int,
+    reason: str,
+) -> int:
+    """Record spoiled stock without changing inventory quantities."""
+
+    _validate_stock_loss_record(
+        record_date,
+        store_id,
+        product_id,
+        quantity,
+        reason,
+    )
+
+    with get_connection() as connection:
+        cursor = connection.execute(
+            """
+            INSERT INTO spoilage_records (
+                record_date,
+                store_id,
+                product_id,
+                quantity,
+                reason
+            )
+            VALUES (?, ?, ?, ?, ?)
+            """,
+            (
+                record_date,
+                store_id.strip(),
+                product_id.strip(),
+                quantity,
+                reason.strip(),
+            ),
+        )
+
+        return cursor.lastrowid
+
+
+def record_damage(
+    record_date: str,
+    store_id: str,
+    product_id: str,
+    quantity: int,
+    reason: str,
+) -> int:
+    """Record damaged stock without changing inventory quantities."""
+
+    _validate_stock_loss_record(
+        record_date,
+        store_id,
+        product_id,
+        quantity,
+        reason,
+    )
+
+    with get_connection() as connection:
+        cursor = connection.execute(
+            """
+            INSERT INTO damage_records (
+                record_date,
+                store_id,
+                product_id,
+                quantity,
+                reason
+            )
+            VALUES (?, ?, ?, ?, ?)
+            """,
+            (
+                record_date,
+                store_id.strip(),
+                product_id.strip(),
+                quantity,
+                reason.strip(),
+            ),
+        )
+
+        return cursor.lastrowid
+
+
+def get_spoilage_records() -> list[dict]:
+    """Retrieve all recorded spoilage incidents."""
+
+    with get_connection() as connection:
+        cursor = connection.execute(
+            """
+            SELECT
+                spoilage_id,
+                record_date,
+                store_id,
+                product_id,
+                quantity,
+                reason
+            FROM spoilage_records
+            ORDER BY record_date DESC, spoilage_id DESC
+            """
+        )
+
+        columns = [column[0] for column in cursor.description]
+
+        return [
+            dict(zip(columns, row))
+            for row in cursor.fetchall()
+        ]
+
+
+def get_damage_records() -> list[dict]:
+    """Retrieve all recorded damage incidents."""
+
+    with get_connection() as connection:
+        cursor = connection.execute(
+            """
+            SELECT
+                damage_id,
+                record_date,
+                store_id,
+                product_id,
+                quantity,
+                reason
+            FROM damage_records
+            ORDER BY record_date DESC, damage_id DESC
+            """
+        )
+
+        columns = [column[0] for column in cursor.description]
+
+        return [
+            dict(zip(columns, row))
+            for row in cursor.fetchall()
+        ]
+def get_sku_code(product_id: str) -> str | None:
+    """Return the SKU code associated with a product ID."""
+
+    if not isinstance(product_id, str) or not product_id.strip():
+        raise ValueError("Product ID is required.")
+
+    with get_connection() as connection:
+        row = connection.execute(
+            """
+            SELECT sku_code
+            FROM products
+            WHERE product_id = ?
+            """,
+            (product_id.strip(),),
+        ).fetchone()
+
+    return row[0] if row else None
 if __name__ == "__main__":
     count = initialize_database()
 

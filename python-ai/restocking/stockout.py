@@ -235,7 +235,7 @@ def main():
 
     restocking_dir = Path(__file__).resolve().parent
     repo_root = restocking_dir.parents[1]
-    data_file = repo_root / "dataset" / "processed" / "retail_store_inventory_clean.csv"
+    data_file = repo_root / "dataset" / "raw" / "retail_store_inventory.csv"
     forecast_file = repo_root / "python-ai" / "forecasting" / "outputs" / "retail_demand_forecasts_m11_06.csv"
     output_dir = restocking_dir / "outputs"
     output_file = output_dir / "retail_stockout_detection_m12_03.csv"
@@ -244,8 +244,7 @@ def main():
 
     if not data_file.is_file():
         raise FileNotFoundError(
-            f"Processed dataset not found: {data_file}. Run "
-            "python .\\python-ai\\data\\prepare_temporal_splits.py first."
+            f"Inventory dataset not found: {data_file}"
         )
     if not forecast_file.is_file():
         raise FileNotFoundError(f"M11-06 forecast output not found: {forecast_file}")

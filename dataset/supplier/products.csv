@@ -1,0 +1,201 @@
+id,name,category,stock_level,price,created_at
+1,Modern Monitor,health,,26.08,2020-09-18 14:34:39
+2,Smart Charger,grocery clothing,936,606.34,2020-05-19 17:32:38
+3,Heavy Duty Camera,garden automotive,153,,2022-11-19 11:10:43
+4,Deluxe Speaker,books,351,55.38,2021-04-12 09:49:07
+5,Eco Planter,toys electronics,146,304.77,2023-12-07 16:13:30
+6,Modern Backpack,health,,97.25,2023-08-25 09:57:14
+7,Heavy Duty Kettle,furniture clothing,468,535.91,2021-04-21 15:17:38
+8,Pro Mug,music jewelry,542,143.65,2020-12-08 12:34:09
+9,Standard Bottle,health,756,542.24,2022-04-20 12:13:55
+10,Modern Toolkit,kitchen accessories,,,2022-07-17 11:12:17
+11,Deluxe Pan,books accessories automotive,890,95.45,2022-08-09 13:18:10
+12,Smart Notebook,,287,631.40,2023-03-23 15:28:44
+13,Wireless Notebook,kitchen electronics,500,,2023-03-17 13:09:14
+14,Smart Jacket,pet,,15.22,2020-09-23 14:13:58
+15,Portable Mug,jewelry,43,339.06,2021-10-27 13:02:08
+16,Portable Pan,automotive,679,182.18,2023-02-23 14:34:46
+17,Deluxe Kettle,,466,541.54,2023-09-19 14:39:41
+18,Ultra Backpack,clothing automotive beauty,629,345.02,2021-10-09 10:56:47
+19,Eco Mug,jewelry footwear,444,919.03,2020-08-21 09:58:30
+20,Folding Jacket,clothing,64,267.45,2022-11-29 16:26:47
+21,Modern Planter,clothing,58,576.00,2020-09-08 16:01:23
+22,Insulated Toolkit,clothing kitchen,229,17.75,2021-05-25 14:41:35
+23,Standard Charger,outdoor,288,,2021-09-28 08:12:22
+24,Folding Charger,,734,642.57,2020-06-12 16:07:13
+25,Pro Pan,outdoor books electronics,923,288.68,2020-05-20 12:57:34
+26,Mini Camera,beauty,8,949.85,2021-08-02 11:49:37
+27,Eco Tent,accessories footwear clothing,851,162.10,2022-08-24 16:40:22
+28,Premium Mug,,621,193.41,2022-11-19 15:42:44
+29,Mini Headphones,furniture,654,989.36,2023-04-22 17:22:04
+30,Standard Tripod,,820,261.38,2021-12-23 14:44:52
+31,Folding Chair,sports clothing,887,678.77,2020-10-28 13:31:15
+32,Premium Headphones,video,904,80.18,2022-07-30 16:45:47
+33,Essential Chair,outdoor accessories sports,512,31.77,2020-04-07 14:43:49
+34,Insulated Blender,,646,243.30,2022-08-05 12:49:04
+35,Ultra Tent,garden,421,27.75,2022-01-20 06:16:30
+36,Ultra Keyboard,beauty,596,238.30,2022-03-30 13:47:04
+37,Classic Chair,garden,643,528.64,2021-02-23 11:17:05
+38,Heavy Duty Router,electronics kitchen books,,517.54,2022-09-25 07:14:31
+39,Ultra Chair,music kitchen,,394.84,2022-10-17 12:30:22
+40,Slim Backpack,outdoor kitchen furniture,47,822.17,2022-01-24 13:49:18
+41,Portable Charger,video jewelry,706,808.32,2023-10-08 16:03:57
+42,Deluxe Notebook,,,441.86,2021-02-09 19:37:08
+43,Compact Lantern,automotive health sports,284,330.46,2021-02-27 16:40:16
+44,Travel Charger,kitchen garden clothing,167,1.02,2021-07-06 13:18:10
+45,Mini Camera,video,195,67.50,2020-03-31 10:04:24
+46,Compact Lantern,sports music,407,73.77,2023-11-12 14:34:01
+47,Slim Kettle,automotive music,345,39.97,2022-12-18 11:17:54
+48,Essential Monitor,accessories,919,540.70,2023-11-10 13:24:16
+49,Essential Planter,clothing jewelry,124,120.11,2022-02-13 06:06:44
+50,Pro Charger,clothing furniture beauty,705,2.56,2023-07-02 15:40:35
+51,Deluxe Notebook,accessories clothing pet,,930.52,2023-02-16 09:53:39
+52,Travel Watch,jewelry,857,337.34,2020-06-02 08:17:53
+53,Slim Notebook,health grocery,66,59.42,2023-08-31 15:23:50
+54,Ultra Umbrella,pet,924,899.26,2023-01-08 07:46:42
+55,Slim Keyboard,pet video,105,190.86,2020-08-18 12:23:25
+56,Eco Tent,,995,59.49,2020-11-19 14:43:24
+57,Essential Umbrella,grocery,123,873.74,2022-02-20 14:23:22
+58,Classic Backpack,sports,985,521.89,2023-09-26 17:21:18
+59,Compact Camera,automotive,996,1.29,2020-04-21 18:43:15
+60,Standard Jacket,outdoor furniture music,,9.46,2021-10-08 17:58:09
+61,Mini Mug,home furniture jewelry,674,4.27,2021-12-14 09:50:28
+62,Folding Camera,,460,415.81,2020-04-01 10:13:48
+63,Pro Backpack,kitchen automotive,749,448.31,2021-05-24 08:15:13
+64,Compact Pan,video,692,2.74,2020-08-18 16:07:19
+65,Vintage Charger,grocery,,188.92,2023-07-31 09:11:44
+66,Wireless Chair,grocery,850,311.09,2021-04-06 09:18:31
+67,Wireless Desk Lamp,footwear,,903.97,2022-03-05 19:12:33
+68,Mini Toolkit,sports automotive,403,83.75,2022-10-28 15:04:44
+69,Eco Blender,jewelry software accessories,308,828.81,2022-11-17 12:37:08
+70,Essential Chair,beauty,788,714.92,2021-10-19 14:23:14
+71,Classic Lantern,music,811,355.65,2021-11-07 18:48:30
+72,Essential Umbrella,toys,161,,2021-07-08 16:45:36
+73,Compact Monitor,sports accessories electronics,421,481.39,2022-03-08 10:37:16
+74,Compact Desk Lamp,,,718.27,2020-05-12 08:54:35
+75,Wireless Lantern,garden health,6,604.37,2022-08-19 13:41:37
+76,Smart Camera,sports,635,181.76,2021-01-07 10:16:49
+77,Insulated Blender,,54,549.47,2022-10-19 11:23:15
+78,Premium Charger,pet outdoor beauty,714,,2023-01-11 11:11:32
+79,Deluxe Blender,software toys kitchen,802,812.82,2021-10-28 14:41:45
+80,Modern Keyboard,grocery music,167,13.17,2021-11-07 17:41:38
+81,Insulated Charger,footwear,202,11.82,2020-09-27 12:48:59
+82,Classic Desk Lamp,kitchen,414,51.21,2022-05-29 15:18:27
+83,Folding Tent,video,875,7.24,2020-01-20 14:45:10
+84,Pro Lantern,beauty,501,7.89,2020-10-02 15:32:36
+85,Wireless Notebook,grocery software clothing,436,191.43,2022-07-31 10:41:22
+86,Wireless Charger,outdoor video accessories,921,773.54,2023-07-25 15:28:24
+87,Slim Headphones,music toys pet,842,59.18,2023-04-18 14:44:53
+88,Travel Router,home software footwear,198,528.07,2020-07-05 15:58:43
+89,Essential Kettle,video toys,425,,2023-12-17 13:16:11
+90,Compact Backpack,,948,191.83,2021-09-28 14:18:39
+91,Compact Bottle,beauty,819,16.96,2023-09-29 20:38:22
+92,Premium Lantern,pet,442,386.21,2021-05-28 16:27:16
+93,Mini Chair,books home video,938,100.15,2020-09-27 13:37:33
+94,Essential Backpack,sports kitchen home,143,997.18,2020-01-02 16:49:36
+95,Premium Watch,electronics toys,736,,2022-02-11 13:17:32
+96,Travel Tripod,electronics,864,740.08,2023-06-23 11:51:02
+97,Eco Bottle,home,24,298.96,2021-04-29 11:16:56
+98,Heavy Duty Camera,automotive health software,773,634.06,2021-09-05 09:19:13
+99,Classic Desk Lamp,grocery,140,769.54,2021-09-12 07:25:54
+100,Ultra Kettle,pet beauty,112,286.57,2023-05-24 11:49:55
+101,Insulated Charger,,902,330.05,2021-08-02 08:04:02
+102,Classic Lantern,accessories beauty garden,174,20.68,2020-12-09 15:56:20
+103,Eco Speaker,video software music,218,,2022-11-14 18:20:32
+104,Compact Mug,beauty toys grocery,102,145.91,2022-10-13 15:26:46
+105,Folding Tripod,automotive jewelry software,661,769.58,2023-12-12 13:53:14
+106,Deluxe Bottle,health,173,126.25,2023-05-01 07:28:13
+107,Essential Jacket,,7,334.00,2023-09-11 09:11:02
+108,Slim Toolkit,automotive outdoor,574,213.68,2022-06-23 17:04:16
+109,Modern Notebook,jewelry,480,7.53,2021-12-10 10:49:10
+110,Insulated Monitor,books footwear toys,118,352.51,2023-01-23 18:36:18
+111,Folding Camera,software beauty,360,7.66,2023-08-04 13:20:17
+112,Essential Charger,beauty jewelry health,344,876.96,2020-01-25 10:28:13
+113,Portable Watch,health,571,599.19,2023-09-07 16:53:10
+114,Insulated Tent,clothing sports books,600,2.21,2021-06-13 13:11:11
+115,Compact Bottle,clothing toys pet,689,986.72,2021-12-21 09:49:29
+116,Modern Kettle,furniture sports,387,467.59,2020-07-06 17:00:16
+117,Pro Headphones,health,637,313.05,2022-10-19 15:48:36
+118,Slim Notebook,home software,500,40.14,2023-11-16 11:18:53
+119,Essential Desk Lamp,grocery,386,,2022-03-29 12:00:58
+120,Portable Tent,jewelry,838,284.25,2023-10-25 14:48:56
+121,Travel Pan,outdoor,267,833.44,2021-05-16 08:01:30
+122,Insulated Pan,software footwear,151,,2021-10-16 13:59:26
+123,Travel Pan,toys,322,14.45,2023-06-21 10:23:15
+124,Wireless Monitor,beauty,,491.68,2021-11-14 12:58:33
+125,Smart Kettle,,589,70.03,2022-02-08 18:12:44
+126,Heavy Duty Keyboard,software,542,450.52,2021-06-26 13:34:01
+127,Insulated Headphones,sports outdoor software,738,869.82,2023-04-27 15:57:14
+128,Portable Router,outdoor jewelry electronics,471,,2022-04-23 11:44:21
+129,Heavy Duty Monitor,beauty kitchen,41,284.63,2022-11-02 15:29:44
+130,Smart Toolkit,health beauty books,445,426.87,2021-12-20 15:17:48
+131,Wireless Router,furniture books,320,909.37,2021-03-15 17:20:01
+132,Compact Notebook,electronics,,966.66,2023-05-21 13:23:43
+133,Mini Blender,music outdoor,717,,2021-06-20 12:07:32
+134,Folding Notebook,health,327,245.57,2020-06-19 13:44:14
+135,Eco Pan,sports home grocery,545,,2022-07-28 09:10:19
+136,Smart Headphones,toys,450,,2023-11-03 14:30:41
+137,Compact Speaker,electronics,247,303.81,2020-05-30 08:08:48
+138,Ultra Mug,electronics,453,277.36,2021-08-27 14:59:02
+139,Slim Chair,furniture,496,924.84,2021-06-03 18:14:14
+140,Essential Bottle,grocery garden,750,926.20,2022-06-21 08:37:47
+141,Ultra Backpack,,951,682.38,2021-09-22 15:57:52
+142,Smart Router,music books,906,1.05,2023-06-25 19:13:11
+143,Mini Headphones,pet grocery outdoor,29,339.48,2023-04-09 17:46:43
+144,Ultra Charger,jewelry kitchen clothing,265,310.81,2023-12-31 02:12:56
+145,Vintage Pan,kitchen video toys,27,44.47,2022-06-13 15:26:32
+146,Heavy Duty Camera,sports,537,29.65,2023-10-10 17:06:55
+147,Portable Pan,sports furniture,119,459.18,2023-12-16 12:35:42
+148,Travel Umbrella,sports,674,2.14,2020-02-20 08:21:14
+149,Mini Umbrella,sports outdoor software,377,31.29,2023-06-20 21:19:06
+150,Compact Backpack,video,,567.20,2021-12-13 18:03:10
+151,Mini Router,furniture music home,971,668.30,2021-02-13 16:55:11
+152,Ultra Monitor,beauty,644,253.65,2020-10-25 14:15:18
+153,Pro Chair,furniture footwear,774,588.56,2021-03-08 15:43:38
+154,Ultra Charger,,84,6.11,2022-01-31 11:29:00
+155,Heavy Duty Desk Lamp,footwear software,964,359.12,2020-09-04 13:21:51
+156,Smart Umbrella,kitchen clothing music,907,807.31,2023-10-31 13:17:38
+157,Eco Jacket,music toys,117,934.65,2021-10-31 19:22:50
+158,Smart Notebook,,938,164.19,2021-10-22 16:30:53
+159,Insulated Headphones,kitchen,595,178.90,2021-04-28 18:59:55
+160,Deluxe Keyboard,books home outdoor,379,,2023-04-16 17:50:47
+161,Deluxe Backpack,accessories,,8.14,2020-04-11 10:47:12
+162,Mini Watch,grocery outdoor accessories,497,898.50,2023-03-24 10:51:19
+163,Wireless Jacket,outdoor,907,385.13,2022-03-21 15:40:35
+164,Standard Camera,garden grocery footwear,752,,2022-09-05 09:38:42
+165,Mini Watch,furniture garden,626,33.36,2023-04-29 16:33:37
+166,Slim Tent,jewelry home sports,549,,2020-04-26 09:15:02
+167,Premium Backpack,books,139,330.82,2020-05-15 09:03:02
+168,Travel Camera,grocery jewelry sports,560,16.82,2020-01-19 23:02:24
+169,Compact Tripod,footwear home,832,294.09,2023-10-27 09:25:19
+170,Portable Tent,health,844,594.11,2020-02-06 20:10:37
+171,Eco Jacket,furniture books outdoor,563,67.91,2020-02-17 18:46:13
+172,Insulated Router,home electronics outdoor,644,455.40,2020-03-18 12:55:31
+173,Portable Kettle,furniture grocery,813,,2023-12-10 08:54:43
+174,Mini Tent,books grocery,358,,2023-11-05 13:16:49
+175,Eco Blender,accessories kitchen furniture,392,276.44,2022-09-13 10:50:50
+176,Pro Blender,grocery,148,249.18,2023-08-08 18:17:15
+177,Folding Umbrella,kitchen electronics software,,742.67,2020-05-19 12:26:43
+178,Insulated Backpack,books sports furniture,598,241.16,2021-05-05 09:26:24
+179,Smart Watch,outdoor grocery accessories,,561.96,2022-04-21 17:26:10
+180,Modern Planter,health,593,39.86,2023-11-06 10:59:01
+181,Mini Desk Lamp,electronics outdoor,920,15.59,2020-02-22 18:46:15
+182,Mini Backpack,pet,965,10.31,2023-02-01 10:58:19
+183,Wireless Jacket,accessories,769,688.88,2020-12-23 11:02:02
+184,Insulated Headphones,software,192,27.07,2023-05-07 17:35:32
+185,Wireless Mug,,283,599.48,2020-11-17 14:56:49
+186,Premium Pan,software automotive grocery,247,477.54,2023-06-04 12:44:49
+187,Compact Watch,beauty video,76,755.97,2022-05-11 09:03:57
+188,Wireless Toolkit,footwear,865,275.83,2023-11-06 14:18:01
+189,Wireless Camera,electronics clothing,358,172.99,2022-03-28 09:52:33
+190,Vintage Speaker,toys video clothing,255,656.29,2020-05-23 14:40:55
+191,Standard Jacket,accessories automotive sports,329,222.29,2021-04-21 15:56:15
+192,Smart Desk Lamp,automotive beauty outdoor,,932.17,2021-07-11 15:54:57
+193,Essential Charger,accessories kitchen,691,,2020-07-31 14:30:28
+194,Premium Umbrella,electronics video garden,,73.60,2021-12-11 15:19:07
+195,Travel Keyboard,sports clothing,945,4.61,2020-09-16 06:10:39
+196,Premium Tripod,,38,,2023-04-27 12:45:32
+197,Modern Chair,video,826,5.69,2022-10-24 09:13:01
+198,Vintage Router,clothing jewelry,251,80.26,2020-05-05 09:34:46
+199,Folding Toolkit,automotive,405,270.62,2022-04-25 15:33:18
+200,Slim Tripod,electronics,569,229.30,2020-09-28 08:12:18
