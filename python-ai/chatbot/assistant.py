@@ -776,181 +776,7 @@ def handle_damage_query(question):
 
     return "\n".join(lines)
 
-# --------------------------------------------------
-# SKU, SPOILAGE AND DAMAGE HANDLERS
-# --------------------------------------------------
 
-
-def process_message(question):
-    """Predict intent and generate the appropriate response."""
-
-    global PENDING_STOCK_LOSS
-
-    question = question.strip()
-
-    if not question:
-        return "Please enter a question."
-
-    # Continue an active spoilage or damage recording process
-    if PENDING_STOCK_LOSS is not None:
-        return handle_pending_stock_loss(question)
-
-    intent = chatbot_model.predict([question])[0]
-
-    print(f"\nDetected intent: {intent}")
-
-    # Out of scope questions
-    if intent == "OUT_OF_SCOPE":
-        return (
-            "I'm sorry, I can only assist with Retail-X-AI functions.\n"
-            "Please ask me about inventory, sales, demand forecasting, "
-            "reordering, stockouts, suppliers, SKU codes, spoilage or damage."
-        )
-
-    # Greeting
-    if intent == "GREETING":
-        return (
-            "Hello! Welcome to Retail-X-AI. "
-            "How can I help you with your shop today?"
-        )
-
-    # Help
-    if intent == "HELP":
-        return (
-            "I can help you with:\n"
-            "1. Demand forecasting\n"
-            "2. Inventory levels\n"
-            "3. Reorder recommendations\n"
-            "4. Stockout detection\n"
-            "5. Sales summaries and analysis\n"
-            "6. Top-selling products\n"
-            "7. Supplier information\n"
-            "8. Supplier recommendations\n"
-            "9. Supplier performance information\n"
-            "10. SKU code lookup\n"
-            "11. Record spoiled stock\n"
-            "12. View spoilage records\n"
-            "13. Record damaged stock\n"
-            "14. View damage records"
-        )
-
-    # Goodbye
-    if intent == "GOODBYE":
-        return "Goodbye! Thank you for using Retail-X-AI."
-
-    # SKU lookup
-    if intent == "SKU_LOOKUP":
-        try:
-            return handle_sku_lookup(question)
-        except (FileNotFoundError, ValueError, KeyError) as error:
-            return f"Unable to retrieve SKU information: {error}"
-
-    # Record spoilage
-    if intent == "SPOILAGE_RECORD":
-        PENDING_STOCK_LOSS = {
-            "type": "spoilage",
-            "step": "date",
-            "data": {}
-        }
-        return (
-            "Let's record spoiled stock.\n"
-            "What is the record date? Use YYYY-MM-DD."
-        )
-
-    # View spoilage records
-    if intent == "SPOILAGE_QUERY":
-        try:
-            return handle_spoilage_query(question)
-        except (FileNotFoundError, ValueError, KeyError) as error:
-            return f"Unable to retrieve spoilage records: {error}"
-
-    # Record damage
-    if intent == "DAMAGE_RECORD":
-        PENDING_STOCK_LOSS = {
-            "type": "damage",
-            "step": "date",
-            "data": {}
-        }
-        return (
-            "Let's record damaged stock.\n"
-            "What is the record date? Use YYYY-MM-DD."
-        )
-
-    # View damage records
-    if intent == "DAMAGE_QUERY":
-        try:
-            return handle_damage_query(question)
-        except (FileNotFoundError, ValueError, KeyError) as error:
-            return f"Unable to retrieve damage records: {error}"
-
-    # Demand forecasting
-    if intent == "DEMAND_FORECAST":
-        try:
-            return handle_demand_forecast()
-        except (FileNotFoundError, ValueError, KeyError) as error:
-            return (
-                f"Unable to retrieve demand forecast results: {error}"
-            )
-
-    # Inventory levels
-    if intent == "INVENTORY_LEVEL":
-        try:
-            return handle_inventory_level(question)
-        except (FileNotFoundError, ValueError, KeyError) as error:
-            return f"Unable to retrieve inventory levels: {error}"
-
-    # Reorder recommendations
-    if intent == "REORDER_RECOMMENDATION":
-        try:
-            return handle_reorder_recommendation(question)
-        except (FileNotFoundError, ValueError, KeyError) as error:
-            return (
-                f"Unable to retrieve reorder recommendations: {error}"
-            )
-
-    # Stockout detection
-    if intent == "STOCKOUT_STATUS":
-        try:
-            return handle_stockout_status(question)
-        except (FileNotFoundError, ValueError, KeyError) as error:
-            return f"Unable to retrieve stockout results: {error}"
-
-    # Sales summary
-    if intent == "SALES_SUMMARY":
-        try:
-            return handle_sales_summary()
-        except (FileNotFoundError, ValueError, KeyError) as error:
-            return f"Unable to retrieve sales summary: {error}"
-
-    # Sales factor analysis
-    if intent == "SALES_FACTOR_ANALYSIS":
-        try:
-            return handle_sales_factor_analysis()
-        except (FileNotFoundError, ValueError, KeyError) as error:
-            return f"Unable to analyse sales factors: {error}"
-
-    # Top selling products
-    if intent == "TOP_SELLING_PRODUCTS":
-        try:
-            return handle_top_selling_products(question)
-        except (FileNotFoundError, ValueError, KeyError) as error:
-            return f"Unable to retrieve top selling products: {error}"
-
-    # Supplier functionality
-    supplier_intents = [
-        "SUPPLIER_QUERY",
-        "SUPPLIER_RECOMMENDATION",
-        "SUPPLIER_PERFORMANCE"
-    ]
-
-    if intent in supplier_intents:
-        return handle_supplier_intent(intent, question)
-
-    # Other functionality not yet integrated
-    return (
-        f"I recognised your question as {intent}, "
-        "but this functionality has not been integrated yet."
-    )
 
 # --------------------------------------------------
 # SPOILAGE AND DAMAGE RECORDING CONVERSATION
@@ -1076,7 +902,6 @@ def handle_pending_stock_loss(answer):
 # MAIN CHATBOT MESSAGE PROCESSING
 # --------------------------------------------------
 
-
 def process_message(question):
     """Predict intent and generate the appropriate response."""
 
@@ -1087,7 +912,6 @@ def process_message(question):
     if not question:
         return "Please enter a question."
 
-    # Continue an active spoilage or damage recording process
     if PENDING_STOCK_LOSS is not None:
         return handle_pending_stock_loss(question)
 
@@ -1095,7 +919,6 @@ def process_message(question):
 
     print(f"\nDetected intent: {intent}")
 
-    # Out of scope questions
     if intent == "OUT_OF_SCOPE":
         return (
             "I'm sorry, I can only assist with Retail-X-AI functions.\n"
@@ -1103,14 +926,12 @@ def process_message(question):
             "reordering, stockouts, suppliers, SKU codes, spoilage or damage."
         )
 
-    # Greeting
     if intent == "GREETING":
         return (
             "Hello! Welcome to Retail-X-AI. "
             "How can I help you with your shop today?"
         )
 
-    # Help
     if intent == "HELP":
         return (
             "I can help you with:\n"
@@ -1130,18 +951,15 @@ def process_message(question):
             "14. View damage records"
         )
 
-    # Goodbye
     if intent == "GOODBYE":
         return "Goodbye! Thank you for using Retail-X-AI."
 
-    # SKU lookup
     if intent == "SKU_LOOKUP":
         try:
             return handle_sku_lookup(question)
         except (FileNotFoundError, ValueError, KeyError) as error:
             return f"Unable to retrieve SKU information: {error}"
 
-    # Record spoilage
     if intent == "SPOILAGE_RECORD":
         PENDING_STOCK_LOSS = {
             "type": "spoilage",
@@ -1153,14 +971,12 @@ def process_message(question):
             "What is the record date? Use YYYY-MM-DD."
         )
 
-    # View spoilage records
     if intent == "SPOILAGE_QUERY":
         try:
             return handle_spoilage_query(question)
         except (FileNotFoundError, ValueError, KeyError) as error:
             return f"Unable to retrieve spoilage records: {error}"
 
-    # Record damage
     if intent == "DAMAGE_RECORD":
         PENDING_STOCK_LOSS = {
             "type": "damage",
@@ -1172,67 +988,54 @@ def process_message(question):
             "What is the record date? Use YYYY-MM-DD."
         )
 
-    # View damage records
     if intent == "DAMAGE_QUERY":
         try:
             return handle_damage_query(question)
         except (FileNotFoundError, ValueError, KeyError) as error:
             return f"Unable to retrieve damage records: {error}"
 
-    # Demand forecasting
     if intent == "DEMAND_FORECAST":
         try:
             return handle_demand_forecast()
         except (FileNotFoundError, ValueError, KeyError) as error:
-            return (
-                f"Unable to retrieve demand forecast results: {error}"
-            )
+            return f"Unable to retrieve demand forecast results: {error}"
 
-    # Inventory levels
     if intent == "INVENTORY_LEVEL":
         try:
             return handle_inventory_level(question)
         except (FileNotFoundError, ValueError, KeyError) as error:
             return f"Unable to retrieve inventory levels: {error}"
 
-    # Reorder recommendations
     if intent == "REORDER_RECOMMENDATION":
         try:
             return handle_reorder_recommendation(question)
         except (FileNotFoundError, ValueError, KeyError) as error:
-            return (
-                f"Unable to retrieve reorder recommendations: {error}"
-            )
+            return f"Unable to retrieve reorder recommendations: {error}"
 
-    # Stockout detection
     if intent == "STOCKOUT_STATUS":
         try:
             return handle_stockout_status(question)
         except (FileNotFoundError, ValueError, KeyError) as error:
             return f"Unable to retrieve stockout results: {error}"
 
-    # Sales summary
     if intent == "SALES_SUMMARY":
         try:
             return handle_sales_summary()
         except (FileNotFoundError, ValueError, KeyError) as error:
             return f"Unable to retrieve sales summary: {error}"
 
-    # Sales factor analysis
     if intent == "SALES_FACTOR_ANALYSIS":
         try:
             return handle_sales_factor_analysis()
         except (FileNotFoundError, ValueError, KeyError) as error:
             return f"Unable to analyse sales factors: {error}"
 
-    # Top selling products
     if intent == "TOP_SELLING_PRODUCTS":
         try:
             return handle_top_selling_products(question)
         except (FileNotFoundError, ValueError, KeyError) as error:
             return f"Unable to retrieve top selling products: {error}"
 
-    # Supplier functionality
     supplier_intents = [
         "SUPPLIER_QUERY",
         "SUPPLIER_RECOMMENDATION",
@@ -1242,11 +1045,13 @@ def process_message(question):
     if intent in supplier_intents:
         return handle_supplier_intent(intent, question)
 
-    # Other functionality not yet integrated
     return (
         f"I recognised your question as {intent}, "
         "but this functionality has not been integrated yet."
     )
+
+
+
 
 # --------------------------------------------------
 # CHATBOT TERMINAL
