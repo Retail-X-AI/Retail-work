@@ -1,272 +1,275 @@
-# M04-04 — Use Case Specifications
+# M04-04: Use Case Specifications
 
 ## 1. Purpose
 
-This document defines the main use cases for the Retail-X-AI system based on the approved functional requirements.
+This document describes the main system use cases for Retail-X-AI. The use cases reflect the implemented Python components for retail data preparation, demand analysis, forecasting, inventory recommendations, supplier analysis and chatbot interaction.
 
-Retail-X-AI is an AI-powered inventory demand forecasting and smart restocking system for local spaza shops. The use cases describe how the Shop Owner / Manager interacts with the system to capture retail data, obtain demand forecasts, receive restocking recommendations, identify products requiring attention, use the AI assistant, and view inventory information.
+## 2. System Users
 
-The use cases provide a clear description of how users interact with Retail-X-AI and provide a basis for requirements traceability, system analysis, system design, and subsequent implementation.
+The system is designed to support shop owners and managers through its analytical outputs and chatbot functionality.
 
-## 2. Primary Actor
-
-**Shop Owner / Manager / User**
-
-The primary actor uses Retail-X-AI to manage and understand sales and inventory information and to support inventory, purchasing, and grocery-planning decisions.
+The current implementation processes available retail data through Python components. It does not provide a graphical dashboard or browser-based interface.
 
 ## 3. Use Case Overview
 
 | Use Case ID | Use Case | Related Requirement |
 |---|---|---|
-| UC-01 | Capture Sales and Stock Data | FR-01 |
-| UC-02 | Generate Demand Forecast | FR-02 |
-| UC-03 | Calculate Recommended Reorder Quantities | FR-03 |
-| UC-04 | Identify Slow-Moving and Near-Expiry Products | FR-04 |
-| UC-05 | Interact with Natural-Language AI Assistant | FR-05 |
-| UC-06 | View Interactive Dashboard | FR-06 |
+| UC-01 | Load and Prepare Retail Data | FR-01 |
+| UC-02 | Analyse Historical Demand | FR-02 |
+| UC-03 | Generate Demand Estimates | FR-03 |
+| UC-04 | Analyse Inventory and Restocking Requirements | FR-04 |
+| UC-05 | Identify Potential Stockout Risks | FR-05 |
+| UC-06 | Perform Additional AI-Based Retail Analysis | FR-06 |
+| UC-07 | Recommend Suppliers | FR-07 |
+| UC-08 | Interact with Natural-Language Chatbot | FR-08 |
 
 ---
 
-# UC-01 — Capture Sales and Stock Data
+## UC-01: Load and Prepare Retail Data
 
-## Goal
+**Goal**
 
-Allow the Shop Owner / Manager / User to provide sales and stock information to Retail-X-AI for storage, analysis, forecasting, and inventory management.
+Load and prepare the available retail dataset for analysis and model processing.
 
-## Primary Actor
+**System Input**
 
-Shop Owner / Manager / User
+Available retail CSV dataset.
 
-## Trigger
+**Main Flow**
 
-The user needs to add or update retail sales and stock information.
+1. The data-loading component locates the available dataset.
+2. The system reads the dataset.
+3. The system processes the available columns and records.
+4. Data preparation and cleaning operations are performed.
+5. Prepared data becomes available to the analytical components.
 
-## Preconditions
+**Alternative Flows**
 
-- Retail-X-AI is available.
-- The user has access to the data input function.
-- Data is available through CSV, manual entry, or a supported POS export.
+- If the dataset cannot be located, the loading process reports the problem.
+- If required columns are missing, the system handles the unsuitable input appropriately.
+- Missing or invalid values are handled according to the implemented preparation logic.
 
-## Main Flow
+**Postcondition**
 
-1. The user opens the data capture function.
-2. The user selects a supported input method.
-3. The user provides sales and stock data.
-4. Retail-X-AI validates the supplied data.
-5. The system stores the valid data.
-6. The system confirms successful data capture.
-7. The captured data becomes available for analysis and forecasting.
+The available retail data is prepared for subsequent analysis.
 
-## Alternative / Exception Flows
-
-- If required data is missing, the system identifies the invalid or incomplete information.
-- If the supplied file has an unsupported format, the system informs the user.
-- If validation fails, the system does not process the invalid records until the issue is corrected.
-
-## Postconditions
-
-- Valid sales and stock data is stored.
-- The data is available for subsequent analysis and forecasting.
-
-## Related Requirement
-
-**FR-01 — Capture Sales and Stock Data**
+**Related Requirement:** FR-01.
 
 ---
 
-# UC-02 — Generate Demand Forecast
+## UC-02: Analyse Historical Demand
 
-## Goal
+**Goal**
 
-Generate an estimate of future product demand using available historical sales data and relevant retail information.
+Analyse historical retail demand using the available sales information.
 
-## Primary Actor
+**Main Flow**
 
-Shop Owner / Manager / User
+1. The system accesses the prepared retail dataset.
+2. Historical sales information is examined.
+3. Relevant demand-related features are prepared.
+4. Historical patterns are made available for forecasting and inventory analysis.
 
-## Trigger
+**Alternative Flows**
 
-The user requests a demand forecast or the system processes available data for forecasting.
+- If required historical information is unavailable, the system cannot perform the affected analysis.
+- Unsuitable data is handled according to the implemented preparation logic.
 
-## Preconditions
+**Postcondition**
 
-- Historical sales data is available.
-- The data required for forecasting has been validated.
-- The forecasting process is available.
+Historical demand information is available for further analytical processing.
 
-## Main Flow
-
-1. The user selects a product, product category, or forecasting view.
-2. Retail-X-AI retrieves relevant historical sales and inventory data.
-3. The system prepares the data for forecasting.
-4. The forecasting component analyses historical demand patterns.
-5. The system generates a demand forecast.
-6. The forecast is stored or made available for inventory decision support.
-7. The forecast is presented to the user.
-
-## Alternative / Exception Flows
-
-- If insufficient historical data is available, the system informs the user that a reliable forecast cannot be generated.
-- If data validation fails, the system requests corrected data.
-- If forecasting fails, the system reports that the forecast could not be generated.
-
-## Postconditions
-
-- A demand forecast is generated when sufficient valid data is available.
-- Forecast information is available to support inventory and purchasing decisions.
-
-## Related Requirement
-
-**FR-02 — Generate Demand Forecasts**
+**Related Requirement:** FR-02.
 
 ---
 
-# UC-03 — Calculate Recommended Reorder Quantities
+## UC-03: Generate Demand Estimates
 
-## Goal
+**Goal**
 
-Provide a recommended quantity to reorder based on forecasted demand and current inventory information.
+Generate demand estimates using the implemented forecasting model.
 
-## Primary Actor
+**Main Flow**
 
-Shop Owner / Manager / User
+1. The forecasting component receives prepared historical data.
+2. The system processes the required forecasting features.
+3. Ridge Regression generates demand estimates.
+4. The model is evaluated using historical test data.
+5. Applicable evaluation metrics are calculated.
+6. Forecasting results are made available for analysis.
 
-## Trigger
+**Alternative Flows**
 
-The user requests a restocking recommendation or the system identifies a need for replenishment.
+- If required data is unavailable, forecasting cannot proceed for the affected records.
+- If model processing fails, the system reports the failure.
+- Historical predictions are not presented as confirmed future demand.
 
-## Preconditions
+**Postcondition**
 
-- Product information is available.
-- Current stock information is available.
-- Forecast information is available or can be generated.
-- Any required additional replenishment information is available.
+Demand estimates and applicable model evaluation results are produced.
 
-## Main Flow
-
-1. The user selects a product or reviews a restocking recommendation.
-2. Retail-X-AI retrieves the relevant stock level.
-3. The system retrieves or generates the expected demand.
-4. The system evaluates the available replenishment information.
-5. The system calculates a recommended reorder quantity.
-6. The recommendation is presented to the user.
-7. The user can use the recommendation to support a purchasing decision.
-
-## Alternative / Exception Flows
-
-- If current stock information is unavailable, the system requests updated stock information.
-- If forecast information is unavailable, the system attempts to generate or retrieve the required forecast.
-- If required replenishment information is unavailable, the system identifies the missing information and avoids presenting an unsupported recommendation.
-- If supplier lead-time information is unavailable, the system must not assume a supplier lead time that has not been provided.
-
-## Postconditions
-
-- A reorder recommendation is produced when sufficient information is available.
-- The recommendation can be used by the user to support purchasing decisions.
-
-## Related Requirement
-
-**FR-03 — Calculate Recommended Reorder Quantities**
+**Related Requirement:** FR-03.
 
 ---
 
-# UC-04 — Identify Slow-Moving and Near-Expiry Products
+## UC-04: Analyse Inventory and Restocking Requirements
 
-## Goal
+**Goal**
 
-Identify products that require attention because they have low sales movement or are approaching expiry.
+Calculate suggested reorder quantities using the implemented replenishment logic.
 
-## Primary Actor
+**Main Flow**
 
-Shop Owner / Manager / User
+1. The restocking component receives the available inventory and demand information.
+2. The system applies the configured replenishment assumptions.
+3. Suggested reorder quantities are calculated.
+4. Restocking statuses are assigned.
+5. Recommendations are made available for inventory decision support.
 
-## Trigger
+**Alternative Flows**
 
-The user requests product-attention information or the system performs an analysis of products requiring attention.
+- If required information is unavailable, the system identifies the limitation.
+- If configured assumptions are used, they are distinguished from verified supplier information.
+- Recommendations are not treated as completed purchase orders.
 
-## Preconditions
+**Postcondition**
 
-- Product and sales information is available.
-- Where expiry monitoring is required, valid expiry information must be available to the system.
+Restocking calculations and recommendations are produced using the implemented method.
 
-## Main Flow
-
-1. The user opens the product-attention or alerts function.
-2. Retail-X-AI analyses available product sales and inventory information.
-3. The system identifies products with slow sales movement.
-4. Where expiry information is available, the system checks products approaching expiry.
-5. The system generates appropriate alerts.
-6. The alerts are presented to the user.
-
-## Alternative / Exception Flows
-
-- If insufficient sales information is available, slow-moving analysis may not be possible.
-- If expiry information is unavailable, expiry-based alerts cannot be generated.
-- The system clearly distinguishes unavailable expiry information from products that are confirmed to be near expiry.
-- The system must not identify a product as near expiry without valid expiry information.
-
-## Postconditions
-
-- Slow-moving products are identified where sufficient data is available.
-- Near-expiry products are identified only where valid expiry information is available.
-- Relevant alerts are presented to the user.
-
-## Related Requirement
-
-**FR-04 — Identify Slow-Moving and Near-Expiry Products**
+**Related Requirement:** FR-04.
 
 ---
 
-# UC-05 — Interact with Natural-Language AI Assistant
+## UC-05: Identify Potential Stockout Risks
 
-## Goal
+**Goal**
 
-Allow the Shop Owner / Manager / User to interact with Retail-X-AI using natural language to obtain inventory information, sales insights, restocking guidance, product suggestions, grocery planning assistance, and purchasing decision support.
+Identify potential stockout risks using available retail information.
 
-## Primary Actor
+**Main Flow**
 
-Shop Owner / Manager / User
+1. The stockout detection component receives the available data.
+2. The system processes relevant inventory and demand information.
+3. Potential stockout risks are identified.
+4. Risk statuses are generated.
+5. Results are made available for analysis.
 
-## Trigger
+**Alternative Flows**
 
-The user submits a natural-language question, request, or planning task to the AI assistant.
+- If required inventory information is unavailable, the system identifies the limitation.
+- A risk flag is not treated as proof that an actual stockout occurred.
 
-## Preconditions
+**Postcondition**
 
-- The AI assistant is available.
-- Relevant product, sales, inventory, forecast, recommendation, or pricing information is available where required.
-- The user has access to the AI assistant.
+Potential stockout-risk results are generated.
 
-## Main Flow
+**Related Requirement:** FR-05.
 
-1. The user opens the AI assistant.
-2. The user enters a natural-language question or request.
-3. Retail-X-AI processes the user's request.
-4. The system identifies the relevant information, task, or decision-support requirement.
-5. The system retrieves available product, sales, inventory, forecast, recommendation, or pricing information where applicable.
-6. The system generates a response based on the available information.
-7. The AI assistant presents the response in understandable language.
-8. The user can ask a follow-up question or refine the request.
+---
 
-## Supported Examples
+## UC-06: Perform Additional AI-Based Retail Analysis
 
-The user may ask questions such as:
+**Goal**
 
-- "What is the current stock level?"
-- "Which products are likely to have high demand?"
-- "Which products should I reorder?"
-- "What are my slow-moving products?"
-- "Which products need attention?"
-- "Create a grocery list for my household."
-- "Help me plan my groceries for the week."
-- "Suggest healthy food options for my grocery list."
-- "I have R1,500. What groceries should I prioritise?"
-- "Which products should I buy first within my budget?"
-- "Compare these products and help me decide which one to purchase."
+Perform additional machine learning analysis on the available retail dataset.
 
-## Alternative / Exception Flows
+**Main Flow**
 
-- If the assistant cannot understand the request, it asks the user to rephrase or clarify the question.
-- If required retail data is unavailable, the assistant explains that the requested information cannot currently be confirmed.
-- If pricing or product information is unavailable, the assistant must not invent prices or product details.
-- If the requested information is outside
+1. The system prepares the required analytical data.
+2. K-Means clustering groups records according to the implemented features.
+3. Isolation Forest identifies unusual data patterns.
+4. Forecasting models are compared using applicable evaluation metrics.
+5. Analytical results are made available for interpretation.
+
+**Alternative Flows**
+
+- If the required input data is unsuitable, the affected analysis cannot proceed.
+- Model results are interpreted according to their evaluation metrics and limitations.
+
+**Postcondition**
+
+Additional machine learning analysis results are produced.
+
+**Related Requirement:** FR-06.
+
+---
+
+## UC-07: Recommend Suppliers
+
+**Goal**
+
+Generate supplier recommendations using the implemented rule-based scoring method.
+
+**Main Flow**
+
+1. The supplier recommendation component receives the available supplier information.
+2. The system evaluates the configured supplier criteria.
+3. Lead time, minimum order quantity and supply frequency are considered.
+4. Supplier scores are calculated using the implemented weighting method.
+5. Recommendations are generated for comparison.
+
+**Alternative Flows**
+
+- If supplier information is incomplete, the system handles the missing information according to the implemented logic.
+- Recommendation scores are treated as comparative scores, not probabilities.
+- Recommendations do not represent confirmed supplier orders.
+
+**Postcondition**
+
+Supplier recommendations are generated using the available information.
+
+**Related Requirement:** FR-07.
+
+---
+
+## UC-08: Interact with Natural-Language Chatbot
+
+**Goal**
+
+Allow users to submit natural-language requests supported by the implemented Python chatbot.
+
+**Primary Actor**
+
+Shop Owner / Manager / User.
+
+**Trigger**
+
+The user submits a supported text request to the chatbot.
+
+**Main Flow**
+
+1. The user submits a text request.
+2. The chatbot processes the request.
+3. The intent classifier identifies the supported intent.
+4. The relevant conversation handler processes the request.
+5. The chatbot generates a response.
+6. The response is returned to the user.
+
+**Alternative Flows**
+
+- If the request cannot be classified, the chatbot handles the unsupported intent.
+- If required information is unavailable, the chatbot must not invent a response.
+- Requests outside the implemented functionality are not treated as supported capabilities.
+
+**Postcondition**
+
+The chatbot returns a response for supported requests.
+
+**Related Requirement:** FR-08.
+
+---
+
+## 4. Implementation Boundaries
+
+The use cases describe the implemented Python-based system. They do not imply the existence of:
+
+- A graphical dashboard or browser-based interface.
+- Live POS integration.
+- Live supplier integration.
+- Automatic purchasing.
+- Live inventory synchronisation.
+- Implemented expiry-date monitoring.
+
+## 5. Conclusion
+
+The eight use cases correspond to the eight functional requirements of Retail-X-AI. They describe the main data-processing, analytical, machine learning, recommendation and chatbot functions within the current project scope.

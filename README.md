@@ -116,7 +116,6 @@ Retail-work/
 ├── dataset/
 │   └── raw/
 │
-├── deployment/
 │
 ├── diagrams/
 │
@@ -219,7 +218,7 @@ Testing activities include:
 - Application page validation.
 - Integration testing.
 - Performance testing.
-- Deployment validation.
+
 
 Test documentation and supporting evidence are maintained within the project repository.
 

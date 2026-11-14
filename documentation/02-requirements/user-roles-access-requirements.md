@@ -2,181 +2,97 @@
 
 ## 1. Introduction
 
-Retail-X-AI requires clearly defined user roles and access permissions so that users can access the functions relevant to their responsibilities.
+This document identifies the intended users of Retail-X-AI and describes how the system supports their retail analysis and decision-making activities.
 
-Access control helps protect business information and ensures that system functions are only used by authorised users.
+Retail-X-AI is currently implemented as a Python-based system that processes retail data and produces analytical results, recommendations and chatbot responses.
 
-The main business user of Retail-X-AI is the Shop Owner / Manager. This user manages retail information, monitors inventory, views demand forecasts, receives restocking recommendations and interacts with the AI assistant.
-
-An Administrator role is included for system-level administration and user management.
-
----
+The document distinguishes the intended users of the system from access-control features that have not been implemented.
 
 ## 2. User Roles
 
 ### 2.1 Shop Owner / Manager
 
-The Shop Owner / Manager is the primary business user of Retail-X-AI.
+The Shop Owner / Manager is the primary intended user of Retail-X-AI.
 
-The user is responsible for managing the shop's products, sales and inventory information and using the system's analytics and AI features to support purchasing and stock-management decisions.
+The system supports this user by providing:
 
-The Shop Owner / Manager can:
+- Historical sales analysis.
+- Demand estimates.
+- Inventory and restocking recommendations.
+- Potential stockout-risk analysis.
+- Additional machine learning analysis.
+- Supplier recommendations.
+- Natural-language chatbot assistance.
 
-- Log into the system.
-- Manage product information.
-- Record sales information.
-- View current inventory levels.
-- View sales and inventory trends.
-- View demand forecasts.
-- View stockout risk information.
-- View recommended reorder quantities.
-- View slow-moving products.
-- View product attention and alert information.
-- Use the AI assistant to ask questions about the shop's retail information.
-- Create grocery lists and receive purchase suggestions through the AI assistant.
-- Ask for grocery suggestions based on a stated budget.
-- Compare products and purchasing priorities.
-- View the Retail-X-AI dashboard.
-- View system-generated alerts and recommendations.
+The Shop Owner / Manager uses these outputs to support retail inventory and purchasing decisions.
 
-### 2.2 Administrator
+### 2.2 System Administrator
 
-The Administrator is responsible for system-level administration.
+A system administrator may be responsible for maintaining the Python environment, project configuration, datasets and application components.
 
-The Administrator can:
+However, a separate administrator account, user-management interface and role-based authentication system are not implemented in the current project.
 
-- Log into the system.
-- Manage authorised user accounts.
-- Manage user roles and access permissions.
-- Manage system settings where required.
-- Monitor system access.
-- Maintain administrative information required for the operation of Retail-X-AI.
+## 3. User and System Function Mapping
 
-The Administrator does not replace the Shop Owner / Manager's normal business activities. Business users remain responsible for managing and interpreting their own shop information.
-
----
-
-## 3. Role-Based Access Requirements
-
-Access to Retail-X-AI functions shall be controlled according to the user's assigned role.
-
-| System Function | Shop Owner / Manager | Administrator |
+| System Function | Shop Owner / Manager | System Administrator |
 |---|---|---|
-| Login | Yes | Yes |
-| Manage products | Yes | Yes |
-| Record sales | Yes | Yes |
-| View inventory | Yes | Yes |
-| View sales information | Yes | Yes |
-| View demand forecasts | Yes | Yes |
-| View stockout risk | Yes | Yes |
-| View restocking recommendations | Yes | Yes |
-| View slow-moving products | Yes | Yes |
-| View alerts | Yes | Yes |
-| Use AI assistant | Yes | Yes |
-| Create grocery lists | Yes | Yes |
-| Request budget-based grocery suggestions | Yes | Yes |
-| Compare products | Yes | Yes |
-| View dashboard | Yes | Yes |
-| Manage user accounts | No | Yes |
-| Manage user roles and permissions | No | Yes |
-| Manage system-level settings | No | Yes |
+| Load and prepare retail data | Intended user | Technical maintenance |
+| Analyse historical demand | Intended user | Technical maintenance |
+| Generate demand estimates | Intended user | Technical maintenance |
+| Analyse inventory and restocking requirements | Intended user | Technical maintenance |
+| Identify potential stockout risks | Intended user | Technical maintenance |
+| Perform additional AI-based analysis | Intended user | Technical maintenance |
+| Generate supplier recommendations | Intended user | Technical maintenance |
+| Interact with natural-language chatbot | Intended user | Technical maintenance |
 
----
+## 4. Access and Security Considerations
 
-## 4. Access Control Requirements
+Retail-X-AI currently operates through Python components and does not implement a user authentication or role-based access control system.
 
-### AR-01 — User Authentication
+The following are therefore security considerations for possible future development, not implemented system capabilities:
 
-The system shall require users to authenticate before accessing protected Retail-X-AI functions.
+- User authentication.
+- Individual user accounts.
+- Role identification.
+- Permission-based access restrictions.
+- Secure user sessions and logout.
+- Administrative user management.
+- User-specific business data access.
 
-### AR-02 — Role Identification
+The project should not claim that these controls are operational.
 
-The system shall identify the role assigned to each authenticated user.
+## 5. Functional Requirement Mapping
 
-### AR-03 — Role-Based Access
+The intended Shop Owner / Manager use cases correspond to the eight functional requirements:
 
-The system shall provide access to system functions according to the permissions associated with the user's role.
+| Functional Requirement | Description |
+|---|---|
+| FR-01 | Load and Prepare Retail Data |
+| FR-02 | Analyse Historical Demand |
+| FR-03 | Generate Demand Estimates |
+| FR-04 | Analyse Inventory and Restocking Requirements |
+| FR-05 | Identify Potential Stockout Risks |
+| FR-06 | Perform Additional AI-Based Retail Analysis |
+| FR-07 | Recommend Suppliers |
+| FR-08 | Provide a Natural-Language Chatbot |
 
-### AR-04 — Restricted Functions
+These requirements describe the system's analytical and AI capabilities rather than a graphical user-access interface.
 
-The system shall prevent users from accessing functions that are not authorised for their assigned role.
+## 6. Scope Limitations
 
-### AR-05 — Business Data Protection
+The current implementation does not include:
 
-The system shall protect sales, inventory, product and other business information from unauthorised access.
+- User registration or login.
+- Administrator account management.
+- Role-based permission enforcement.
+- A graphical dashboard.
+- A browser-based user interface.
+- User-specific sessions.
 
-### AR-06 — Session Security
+These functions are outside the implemented project scope.
 
-The system shall provide a secure logout mechanism so that users can end their authenticated session.
+## 7. Conclusion
 
-### AR-07 — Administrative Access
+The Shop Owner / Manager is the primary intended user of Retail-X-AI. The system supports retail decision-making through data preparation, demand analysis, forecasting, inventory analysis, supplier recommendations and chatbot functionality.
 
-Only authorised administrators shall be permitted to manage user accounts, roles and system-level access settings.
-
-### AR-08 — Access Consistency
-
-The same role shall receive consistent permissions across the Retail-X-AI system.
-
----
-
-## 5. Role and Functional Requirement Mapping
-
-The user roles are mapped to the functional requirements defined for Retail-X-AI.
-
-| Functional Requirement | Description | Shop Owner / Manager | Administrator |
-|---|---|---|---|
-| FR-01 | Capture Sales and Stock Data | Yes | Yes |
-| FR-02 | Generate Demand Forecast | Yes | Yes |
-| FR-03 | Calculate Recommended Reorder Quantities | Yes | Yes |
-| FR-04 | Identify Slow-Moving and Near-Expiry Products | Yes | Yes |
-| FR-05 | Interact with Natural-Language AI Assistant | Yes | Yes |
-| FR-06 | View Interactive Dashboard | Yes | Yes |
-
-The Shop Owner / Manager is the primary user of the business functions represented by FR-01 to FR-06.
-
-The Administrator has access where necessary to support system operation and administration.
-
----
-
-## 6. Access Rules
-
-The following access rules apply to Retail-X-AI:
-
-1. A user must authenticate before accessing protected system functions.
-2. Each user must have an assigned role.
-3. A user may only access functions permitted by their assigned role.
-4. Shop Owners / Managers may access business and analytical functions required to operate and monitor the shop.
-5. Administrators may manage authorised users and system-level access.
-6. Users must not be able to access restricted administrative functions unless they have the required permissions.
-7. Business information must only be available to authorised users.
-8. Users should log out when they have finished using the system.
-
----
-
-## 7. Verification and Evidence
-
-The access requirements will be verified by reviewing the role-permission matrix and confirming that each system function has an appropriate access permission.
-
-The following evidence will be provided for this milestone:
-
-- User roles documented.
-- Shop Owner / Manager permissions documented.
-- Administrator permissions documented.
-- Role-based access matrix completed.
-- Access control requirements AR-01 to AR-08 documented.
-- Functional requirements mapped to user roles.
-- Access rules documented.
-- Document saved in `documentation/02-requirements/`.
-- Git commit containing issue ID `M04-03`.
-- Pull request linked to the M04-03 issue.
-- Review completed before merging.
-
----
-
-## 8. Conclusion
-
-Defining user roles and access requirements ensures that Retail-X-AI provides users with the functions they need while protecting business information from unauthorised access.
-
-The Shop Owner / Manager has access to the main business, inventory, forecasting and AI functions, while the Administrator is responsible for user management and system-level administration.
-
-The role-based access requirements provide a clear foundation for implementing secure and consistent access control within Retail-X-AI.
+System administration relates to the technical maintenance of the Python project. Authentication and role-based access control are documented as possible future considerations and are not claimed as implemented features.

@@ -1,44 +1,29 @@
-﻿# M14-05 — Integrate chatbot
+﻿# M14-05: Historical Chatbot Interface Integration
 
-## Scope
+## Original scope
 
-Connect the existing chatbot message-processing service to the application through an HTTP API and browser interface.
+The original M14-05 implementation connected the chatbot to an application through an HTTP API and browser-based interface.
 
-## Components
+The implementation included an application-facing service, HTTP endpoints, a browser interface and API integration tests.
 
-- application/backend/chatbot/service.py: application-facing adapter for the existing chatbot.
-- application/backend/chatbot/api.py: HTTP server and JSON endpoints.
-- application/frontend/index.html: browser-based chat interface.
-- testing/ai/test_chatbot_api.py: API validation and integration tests.
+## Current project scope
 
-## Run
+The HTTP API and browser interface are no longer part of the active project requirements. The current project retains the Python chatbot and its AI functionality.
 
-From the repository root with the project virtual environment active, start the API:
+The following components remain relevant:
 
-    python -m application.backend.chatbot.api
+- `python-ai/chatbot/assistant.py`: chatbot message processing and intent handling.
+- `python-ai/chatbot/supplier_handler.py`: supplier-related chatbot functionality.
+- `python-ai/chatbot/training_data.csv`: chatbot intent training data.
+- `python-ai/chatbot/train_chatbot.py`: intent classifier training.
+- `python-ai/chatbot/models/intent_classifier.joblib`: trained intent classification model.
 
-Open http://127.0.0.1:8000 in a browser.
+## Scope clarification
 
-## Endpoints
+The previous HTTP API and browser interface should not be interpreted as current deliverables. The current chatbot operates through its Python implementation and available project data.
 
-- GET /: serves the chatbot interface.
-- GET /api/health: reports service health.
-- POST /api/chat: accepts a JSON object containing a non-empty message.
+The chatbot is not connected to live point-of-sale systems, physical store inventory or live supplier systems.
 
-## Tests
+## Evidence status
 
-Run the API tests:
-
-    python -m unittest testing.ai.test_chatbot_api
-
-Run the existing chatbot tests:
-
-    python -m unittest testing.ai.test_chatbot_integration testing.ai.test_chatbot_assistant testing.ai.test_chatbot_intents testing.ai.test_chatbot_queries
-
-Run the restocking integration tests:
-
-    python -m unittest testing.ai.test_restocking_integration
-
-## Limitations
-
-The chatbot uses the available project datasets and existing assistant capabilities. It is not connected to live point-of-sale, store inventory, or supplier systems. This integration is intended for local development and is not a production deployment.
+This document records the change in scope from the original M14-05 interface integration to the current Python-based chatbot implementation. The old API tests and browser interface are not included in current test coverage.

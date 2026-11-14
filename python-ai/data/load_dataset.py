@@ -4,11 +4,7 @@ import pandas as pd
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
-
-DATASET_CANDIDATES = [
-    REPO_ROOT / "dataset" / "raw" / "retail_store_inventory.csv",
-    REPO_ROOT / "retail_store_inventory.csv",
-]
+DATASET_PATH = REPO_ROOT / "dataset" / "raw" / "retail_store_inventory.csv"
 
 
 def load_dataset(dataset_path=None):
@@ -19,27 +15,11 @@ def load_dataset(dataset_path=None):
 
         if not path.is_absolute():
             path = REPO_ROOT / path
-
-        if not path.is_file():
-            raise FileNotFoundError(
-                f"Dataset not found: {path}"
-            )
     else:
-        path = next(
-            (candidate for candidate in DATASET_CANDIDATES
-             if candidate.is_file()),
-            None,
-        )
+        path = DATASET_PATH
 
-        if path is None:
-            expected = "\n".join(
-                str(candidate)
-                for candidate in DATASET_CANDIDATES
-            )
-            raise FileNotFoundError(
-                "Could not find the RetailAI dataset. "
-                f"Checked:\n{expected}"
-            )
+    if not path.is_file():
+        raise FileNotFoundError(f"Dataset not found: {path}")
 
     df = pd.read_csv(path)
 

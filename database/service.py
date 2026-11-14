@@ -9,7 +9,7 @@ from datetime import datetime
 import pandas as pd
 
 
-PROJECT_ROOT = Path(__file__).resolve().parents[3]
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DATABASE_DIR = PROJECT_ROOT / "database"
 SCHEMA_PATH = DATABASE_DIR / "sqlite_schema.sql"
 
@@ -245,9 +245,7 @@ def initialize_database(
 
         frame["holiday_promotion"] = promotion.astype("int64")
 
-        # Replace existing records in one transaction.
-        connection.execute("BEGIN")
-
+        # Replace existing records in the active transaction.
         try:
             # Register products and assign unique SKU codes.
             product_ids = sorted(

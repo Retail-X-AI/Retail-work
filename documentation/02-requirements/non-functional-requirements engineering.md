@@ -1,36 +1,47 @@
 # M04-02 Non-Functional Requirements
 
-## Overview
+## 1. Overview
 
-The RetailAI system shall satisfy the following non-functional requirements to ensure usability, performance, reliability, and security for spaza shop owners.
+This document defines the non-functional requirements for the Retail-X-AI Python-based inventory demand forecasting and smart restocking system.
 
-## Usability
+The requirements focus on data integrity, performance, reliability, maintainability and responsible handling of analytical results.
 
-- The system interface must be simple and intuitive.
-- Users with limited formal education or digital experience must be able to operate the system with minimal training.
-- Clear navigation and understandable language must be used.
-- Dashboard information must be easy to interpret.
+## 2. Performance
 
-## Performance
+- The system should process the available retail dataset within a reasonable time on the development hardware.
+- Data loading and preparation should avoid unnecessary processing.
+- Forecasting and inventory calculations should produce results without unnecessary delays.
+- Performance measurements should be based on the actual development environment and available test data.
 
-- Forecast generation for up to 100 products shall complete within 60 seconds on standard hardware.
-- Dashboard pages should load within 5 seconds under normal conditions.
-- The system should efficiently process inventory and sales records.
+## 3. Reliability
 
-## Reliability
+- Data loading and processing operations should handle missing or invalid records appropriately.
+- Database operations should handle errors without leaving incomplete transactions.
+- Analytical components should identify insufficient or unsuitable input data where applicable.
+- The system should produce consistent results when given the same input data and configuration.
 
-- Core forecasting functionality must remain available when internet connectivity is intermittent.
-- Local data storage shall support offline operation.
-- The system shall recover gracefully from temporary connectivity interruptions.
+## 4. Data Integrity
 
-## Security
+- Historical sales records must be distinguished from predicted values.
+- Forecasting results must be evaluated using appropriate test data.
+- Missing values must not be silently replaced with fabricated business information.
+- Restocking recommendations must follow the documented calculation method and configured assumptions.
+- Stockout-risk flags must not be presented as confirmed stockout events.
+- Supplier recommendation scores must not be presented as probabilities.
 
-- Sales records must be protected from unauthorized access.
-- No sensitive customer information shall be collected or stored.
-- User data must be stored securely.
-- Access to system data should be limited to authorized users.
+## 5. Maintainability
 
-## Verification
+- Python components should be organised according to their responsibilities.
+- Source code should use understandable naming and appropriate documentation.
+- Dependencies should be documented to support project setup and execution.
+- Changes to analytical components should preserve the separation between data preparation, model processing and recommendation logic.
 
-The requirements were reviewed against the RetailAI problem definition and project objectives.
+## 6. Security and Privacy
 
+- The project should avoid collecting unnecessary personal or customer information.
+- Database access and file operations should be handled appropriately by the implemented components.
+- Sensitive information should not be included in source code or committed configuration files.
+
+## 7. Verification
+
+These requirements are intended to guide the development and evaluation of the implemented Python components. Claims about performance, reliability and data integrity must be supported by actual project results rather than assumed system capabilities.

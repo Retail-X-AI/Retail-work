@@ -1,76 +1,104 @@
-# RetailAI Functional Requirements
+# Retail-X-AI Functional Requirements
 
 ## 1. Introduction
 
-This document defines the functional requirements for the RetailAI system. RetailAI is an AI-powered inventory demand forecasting and smart restocking system designed for local spaza shops.
+This document defines the functional requirements for Retail-X-AI, an AI-powered inventory demand forecasting and smart restocking system designed for local spaza shops.
 
-The functional requirements describe the main functions that the system must provide to help shop owners manage stock, forecast demand, receive restocking recommendations, identify products that require attention, and interact with the system through a chatbot.
+The system uses historical retail data and Python-based analytical and machine learning components to support demand analysis, inventory decisions, restocking recommendations and natural-language interaction.
+
+The requirements reflect the implemented project scope. They do not describe proposed graphical interfaces, live POS integrations or functionality that has not been implemented.
 
 ## 2. Functional Requirements
 
-### FR-01: Capture Sales and Stock Data
+### FR-01: Load and Prepare Retail Data
 
-The system shall allow users to capture and store past sales and stock data.
+The system shall load the available retail dataset from CSV files.
 
-The system shall support:
-- CSV file uploads.
-- Manual data entry.
-- Simple POS data exports.
+The system shall:
+- Read the available sales and inventory information.
+- Prepare the data for analysis and model processing.
+- Perform the required data cleaning and feature preparation.
+- Identify missing or unsuitable data where applicable.
 
-The captured data shall provide the information required for demand forecasting and inventory management.
+### FR-02: Analyse Historical Demand
 
-### FR-02: Generate Demand Forecasts
+The system shall analyse historical product demand using the available retail data.
 
-The system shall generate demand forecasts for individual products or product categories.
+The analysis shall support:
+- Examination of historical sales patterns.
+- Preparation of demand-related features.
+- Identification of patterns that can support forecasting and inventory decisions.
 
-The forecasts shall use available historical sales data to estimate future product demand.
+### FR-03: Generate Demand Estimates
 
-The system shall present forecast information to the user through the system interface.
+The system shall use trained machine learning models to generate demand estimates from prepared historical data.
 
-### FR-03: Calculate Recommended Reorder Quantities
+The forecasting component shall:
+- Use the implemented Ridge Regression model as the selected baseline.
+- Support model evaluation using historical test data.
+- Calculate and report applicable evaluation metrics.
+- Distinguish historical predictions from actual future demand forecasts.
+- Disclose limitations arising from the available dataset and evaluation method.
 
-The system shall calculate recommended reorder quantities for products.
+### FR-04: Analyse Inventory and Restocking Requirements
 
-The recommendation shall consider:
-- Forecasted demand.
-- Current stock levels.
-- Supplier lead time.
+The system shall calculate inventory restocking recommendations using the implemented replenishment logic.
 
-The system shall provide the recommended quantity that should be reordered to help prevent stockouts.
+The component shall:
+- Calculate suggested reorder quantities.
+- Apply the configured lead-time, review-period and safety-stock assumptions.
+- Assign the applicable restocking status.
+- Identify when insufficient data is available.
+- Present recommendations as decision support rather than completed purchase orders.
 
-### FR-04: Identify Slow-Moving and Near-Expiry Products
+### FR-05: Identify Potential Stockout Risks
 
-The system shall identify products that are slow-moving or approaching their expiry date.
+The system shall analyse available inventory and demand information to identify potential stockout risks.
 
-The system shall generate alerts when products require attention.
+The component shall:
+- Generate stockout-risk assessments.
+- Distinguish predicted or flagged risks from observed stockout events.
+- Disclose limitations caused by unavailable or incomplete inventory information.
 
-These alerts shall help shop owners reduce product waste and improve stock management.
+### FR-06: Perform Additional AI-Based Retail Analysis
 
-### FR-05: Provide a Natural-Language Chatbot
+The system shall support additional analysis using the implemented machine learning components.
 
-The system shall provide a natural-language chatbot that allows users to ask questions about stock and sales information.
+This shall include:
+- Product grouping through K-Means clustering.
+- Identification of unusual data patterns through Isolation Forest.
+- Comparison of applicable forecasting models.
+- Evaluation of model outputs using relevant performance measures.
 
-The chatbot shall support queries such as:
-- Current stock levels.
-- Product demand forecasts.
-- Recommended orders.
-- Products approaching expiry.
+### FR-07: Recommend Suppliers
 
-The chatbot shall provide responses in simple and understandable language.
+The system shall provide supplier recommendations using the implemented rule-based scoring method.
 
-### FR-06: Display an Interactive Dashboard
+The recommendation component shall consider the configured supplier criteria, including lead time, minimum order quantity and supply frequency.
 
-The system shall provide an interactive dashboard displaying relevant inventory and forecasting information.
+The resulting scores shall be treated as comparative recommendation scores and not as probabilities.
 
-The dashboard shall display:
-- Sales trends.
-- Current stock levels.
-- Demand predictions.
-- Reorder recommendations.
-- Stock alerts.
+### FR-08: Provide a Natural-Language Chatbot
 
-The dashboard shall allow shop owners to easily view and understand the information needed to make inventory decisions.
+The system shall provide a Python-based chatbot that recognises supported user intents and handles relevant requests.
 
-## 3. Summary
+The chatbot shall:
+- Classify supported user queries.
+- Handle supported inventory, forecasting, restocking and supplier-related requests.
+- Provide responses through the implemented conversation handlers.
+- Identify unsupported requests where applicable.
 
-The functional requirements define the core capabilities that RetailAI must provide. The system shall capture sales and stock information, forecast demand, recommend reorder quantities, identify slow-moving and near-expiry products, provide a natural-language chatbot, and display important information through an interactive dashboard.
+## 3. Implementation Boundaries
+
+The current project does not include:
+- A graphical dashboard or browser-based user interface.
+- Live POS system integration.
+- Live supplier system integration.
+- Automatic purchasing or order placement.
+- Live inventory synchronisation.
+
+The system operates using the available project dataset and implemented Python components. Results must be interpreted within the limitations of the available data and model assumptions.
+
+## 4. Summary
+
+The functional requirements describe the implemented Python-based Retail-X-AI system. Its main capabilities include retail data preparation, historical demand analysis, machine learning-based demand estimation, inventory restocking calculations, stockout-risk analysis, additional AI-based analysis, supplier recommendations and chatbot interaction.
