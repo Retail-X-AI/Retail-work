@@ -10,6 +10,7 @@ from datetime import datetime
 import joblib
 import numpy as np
 import pandas as pd
+import ollama
 import sounddevice as sd
 from faster_whisper import WhisperModel
 
@@ -897,7 +898,55 @@ def handle_pending_stock_loss(answer):
 
     PENDING_STOCK_LOSS = None
     return "The recording process encountered an unexpected error."
+# --------------------------------------------------
+# GENERATIVE AI CHATBOT (OLLAMA)
+# --------------------------------------------------
 
+LLM_MODEL = "llama3.2:3b"
+
+
+def generate_llm_response(question):
+    """Generate a Retail-X-AI response using the local Llama model."""
+
+    system_prompt = """
+    You are the conversational AI assistant for Retail-X-AI,
+    an AI-powered inventory demand forecasting and smart
+    restocking system for small retail shops.
+
+    Your responsibilities:
+    1. Explain inventory management and demand forecasting.
+    2. Explain AI and machine learning concepts used in retail.
+    3. Help users understand stock management and restocking.
+    4. Answer questions about Retail-X-AI functionality.
+
+    Rules:
+    - Keep answers clear, professional and relevant to retail.
+    - Do not invent sales figures, inventory quantities or forecasts.
+    - Do not claim to have accessed database records unless provided.
+    - Do not pretend to perform inventory operations.
+    - If a question requires actual system data, direct the user
+      to the relevant Retail-X-AI function.
+    - If a question is unrelated to retail or inventory,
+      politely decline.
+    """
+
+    try:
+        response = ollama.chat(
+            model=LLM_MODEL,
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": question}
+            ],
+        )
+
+        return response["message"]["content"].strip()
+
+    except Exception as error:
+        print(f"Ollama error: {error}")
+        return (
+            "I'm currently unable to access the AI language model. "
+            "Please check that Ollama is running and try again."
+        )
 # --------------------------------------------------
 # MAIN CHATBOT MESSAGE PROCESSING
 # --------------------------------------------------
@@ -920,12 +969,7 @@ def process_message(question):
     print(f"\nDetected intent: {intent}")
 
     if intent == "OUT_OF_SCOPE":
-        return (
-            "I'm sorry, I can only assist with Retail-X-AI functions.\n"
-            "Please ask me about inventory, sales, demand forecasting, "
-            "reordering, stockouts, suppliers, SKU codes, spoilage or damage."
-        )
-
+        return generate_llm_response(question)
     if intent == "GREETING":
         return (
             "Hello! Welcome to Retail-X-AI. "
