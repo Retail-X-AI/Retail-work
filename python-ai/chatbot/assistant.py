@@ -1063,7 +1063,8 @@ def process_message(question):
             "11. Record spoiled stock\n"
             "12. View spoilage records\n"
             "13. Record damaged stock\n"
-            "14. View damage records"
+            "14. View damage records\n"
+            "15. Competitive price recommendations"
         )
 
     if intent == "GOODBYE":
