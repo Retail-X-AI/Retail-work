@@ -15,6 +15,10 @@ import sounddevice as sd
 from faster_whisper import WhisperModel
 
 from supplier_handler import handle_supplier_intent
+from application.backend.pricing.service import (
+    format_recommendation,
+    recommend_price,
+)
 PROJECT_ROOT_FOR_IMPORT = Path(__file__).resolve().parents[2]
 
 if str(PROJECT_ROOT_FOR_IMPORT) not in sys.path:
@@ -951,6 +955,63 @@ def generate_llm_response(question):
 # MAIN CHATBOT MESSAGE PROCESSING
 # --------------------------------------------------
 
+
+# --------------------------------------------------
+# COMPETITIVE PRICE RECOMMENDATIONS
+# --------------------------------------------------
+
+def handle_price_recommendation(question):
+    """Generate a recommendation from explicitly labelled price values.
+
+    Example: recommend price cost 28 current 35 competitors 34, 33.50 margin 15
+    """
+    def extract_number(label_pattern, required=True):
+        match = re.search(
+            label_pattern + r"\s*[:=]?\s*R?\s*(\d+(?:\.\d{1,2})?)",
+            question,
+            re.IGNORECASE,
+        )
+        if not match:
+            if required:
+                raise ValueError(
+                    "Please provide cost, current selling price and any "
+                    "competitor prices. Example: cost 28 current 35 "
+                    "competitors 34, 33.50 margin 15."
+                )
+            return None
+        return float(match.group(1))
+
+    cost = extract_number(r"(?:cost(?: price)?)")
+    current = extract_number(r"(?:current(?: selling)? price|selling price)")
+    margin = extract_number(r"(?:margin|minimum margin)", required=False)
+    if margin is None:
+        margin = 15.0
+
+    competitor_match = re.search(
+        r"competitors?\s*[:=]?\s*(.*?)(?=\s+margin\b|$)",
+        question,
+        re.IGNORECASE,
+    )
+    competitors = []
+    if competitor_match:
+        competitors = [
+            float(value)
+            for value in re.findall(
+                r"R?\s*(\d+(?:\.\d{1,2})?)",
+                competitor_match.group(1),
+                re.IGNORECASE,
+            )
+        ]
+
+    result = recommend_price(
+        cost_price=cost,
+        current_price=current,
+        competitor_prices=competitors,
+        minimum_margin_percent=margin,
+    )
+    return format_recommendation(result)
+
+
 def process_message(question):
     """Predict intent and generate the appropriate response."""
 
@@ -963,6 +1024,16 @@ def process_message(question):
 
     if PENDING_STOCK_LOSS is not None:
         return handle_pending_stock_loss(question)
+
+    pricing_terms = (
+        "recommend price", "pricing recommendation", "competitor price",
+        "competitive price", "price suggestion", "beat competitor",
+    )
+    if any(term in question.lower() for term in pricing_terms):
+        try:
+            return handle_price_recommendation(question)
+        except ValueError as error:
+            return f"Unable to generate a price recommendation: {error}"
 
     intent = chatbot_model.predict([question])[0]
 
