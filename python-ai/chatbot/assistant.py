@@ -15,10 +15,6 @@ import sounddevice as sd
 from faster_whisper import WhisperModel
 
 from supplier_handler import handle_supplier_intent
-from application.backend.pricing.service import (
-    format_recommendation,
-    recommend_price,
-)
 PROJECT_ROOT_FOR_IMPORT = Path(__file__).resolve().parents[2]
 
 if str(PROJECT_ROOT_FOR_IMPORT) not in sys.path:
@@ -30,6 +26,10 @@ from application.backend.database.service import (
     record_damage,
     get_spoilage_records,
     get_damage_records,
+)
+from application.backend.pricing.service import (
+    format_recommendation,
+    recommend_price,
 )
 # --------------------------------------------------
 # PROJECT PATHS
@@ -982,7 +982,7 @@ def handle_price_recommendation(question):
         return float(match.group(1))
 
     cost = extract_number(r"(?:cost(?: price)?)")
-    current = extract_number(r"(?:current(?: selling)? price|selling price)")
+    current = extract_number(r"(?:current(?: selling)?(?: price)?|selling price)")
     margin = extract_number(r"(?:margin|minimum margin)", required=False)
     if margin is None:
         margin = 15.0
